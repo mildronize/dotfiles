@@ -1,0 +1,7 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc.local: vim/.vimrc.local
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
