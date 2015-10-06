@@ -19,6 +19,8 @@ Plug 'bling/vim-airline'
 Plug 'zhaocai/GoldenView.Vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
+Plug 'reedes/vim-lexical'
+Plug 'godlygeek/tabular'
 call plug#end()
 
 " Plugin config
