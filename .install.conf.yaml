@@ -3,8 +3,8 @@
 - link:
     ~/.vimrc.local: vim/.vimrc.local
     ~/.vimrc: vim/.vimrc
-#    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux.conf: tmux/.tmux.conf
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-#  - [tmux source-file ~/.tmux.conf, Reloading TMUX configuration (Run in TMUX only)]
+#- [tmux source-file ~/.tmux.conf, Reloading TMUX configuration (Run in TMUX only)]
