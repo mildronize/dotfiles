@@ -1,11 +1,23 @@
 - clean: ['~']
 
 - link:
+    # Vim Configuration
     ~/.vimrc.after: vim/.vimrc.after
     ~/.vimrc.keys: vim/.vimrc.keys
     ~/.vimrc: vim/.vimrc
+
+    # Vim Custom Configuration
+    # ~/.vimrc.local: vim/.vimrc.local
+
+    # TMUX Configuration
     ~/.tmux.conf: tmux/.tmux.conf
 
+    # Zsh Configuration
+    ~/.zshrc: zsh/.zshrc
+
+    # Zsh Custom Configuration
+    # ~/.zshrc.local: zsh/.zshrc.local
+
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-#- [tmux source-file ~/.tmux.conf, Reloading TMUX configuration (Run in TMUX only)]
+    - [git submodule update --init --recursive, Installing submodules]
+    # - [tmux source-file ~/.tmux.conf, Reloading TMUX configuration (Run in TMUX only)]

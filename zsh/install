@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+############################  BASIC SETUP TOOLS
+# http://stackoverflow.com/a/2924755
+bold=$(tput bold)
+endbold=$(tput sgr0)
+# Some code from https://raw.githubusercontent.com/spf13/spf13-vim/3.0/bootstrap.sh
+msg() {
+    printf '%b\n' "$1" >&2
+}
+
+success() {
+    if [ "$ret" -eq '0' ]; then
+        msg "\33[32m[✔]\33[0m ${1}${2}"
+    fi
+}
+
+error() {
+    msg "\33[31m[✘]\33[0m ${1}${2}"
+    exit 1
+}
+
+############################ MAIN
+# http://stackoverflow.com/a/677212
+# Check zsh is existing
+command -v zsh >/dev/null 2>&1 || { error >&2 "${bold}zsh${endbold} is required. Aborting."; exit 1;  }
+
+# Install Oh My Zsh
+# https://github.com/robbyrussell/oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# http://stackoverflow.com/a/677212
+# Check tmux is existing
+command -v tmux >/dev/null 2>&1 || { exit 1;  }
+
+# read -p "Do you want to set default shell of TMUX (y/n)? " answer
+# case ${answer:0:1} in
+    # y|Y )
+        # echo "set -g default-shell /usr/bin/zsh" >> ~/.tmux.conf
+    # ;;
+    # * )
+        # echo Bye
+    # ;;
+# esac
