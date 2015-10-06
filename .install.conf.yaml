@@ -1,7 +1,8 @@
 - clean: ['~']
 
 - link:
-    ~/.vimrc: vim/.vimrc.local
+    ~/.vimrc.local: vim/.vimrc.local
+    ~/.vimrc: vim/.vimrc
 #    ~/.tmux.conf: tmux/.tmux.conf
 
 - shell:
