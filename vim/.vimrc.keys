@@ -1,3 +1,6 @@
+"change <Leader> / to space
+let mapleader = " "
+
 " Map quick resize splits more quickly
 " Orignal from http://vim.wikia.com/wiki/Resize_splits_more_quickly
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
@@ -69,3 +72,15 @@ noremap <C-l> <C-w>l
 "Mute Highlighting
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
+
+" Allow to trigger background
+function! ToggleBG()
+    let s:tbg = &background
+    " Inversion
+    if s:tbg == "dark"
+        set background=light
+    else
+        set background=dark
+    endif
+endfunction
+noremap <leader>bg :call ToggleBG()<CR>

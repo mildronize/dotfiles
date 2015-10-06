@@ -1,6 +1,10 @@
-set nocompatible 		" use vim, not vi api
+set nocompatible 		    " use vim, not vi api
+set t_Co=256 			    " support screen-256color
+set background=dark         " Assume a dark background"
+" colorscheme solarized
 
-set t_Co=256 			" support screen-256color
+" disable auto comment insert
+autocmd FileType * setlocal formatoptions-=cro
 
 " Formating
 
@@ -18,7 +22,6 @@ set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
 set noswapfile			" no swap file
 
 set cursorline			" show a visual line under the cursor's current line.
-
 
 "About Search
 set incsearch
@@ -54,3 +57,12 @@ function AutoPEP8()
     silent execute '!autopep8 --in-place --aggressive --aggressive '.expand("%")
 endfunction
 
+" Status bar
+
+set laststatus=2  " always show the status bar
+" Start the status line
+set statusline=%f\ %m\ %r
+set statusline+=Line:%l/%L[%p%%]
+set statusline+=Col:%v
+set statusline+=Buf:#%n
+set statusline+=[%b][0x%B]

@@ -1,0 +1,3 @@
+" nerdcommenter comment with space //.<code>
+let NERDSpaceDelims=1""
+
