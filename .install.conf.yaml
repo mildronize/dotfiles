@@ -21,7 +21,7 @@
     ~/.zshrc.local: oh-my-zsh/.zshrc.local
 
     # Oh My Zsh Themes
-    # ~/.oh-my-zsh/themes/gitster.zsh-theme: oh-my-zsh/themes/gitster.zsh-theme
+    ~/.oh-my-zsh/themes/mildronize.zsh-theme: oh-my-zsh/themes/mildronize.zsh-theme
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

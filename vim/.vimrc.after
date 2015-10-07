@@ -17,10 +17,9 @@ set softtabstop=4               " Let backspace delete indent
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 set splitright                  " Puts new vsplit windows to the right of the current
 set splitbelow                  " Puts new split windows to the bottom of the current
-set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
+set pastetoggle=<F3>           " pastetoggle (sane indentation on pastes)
 
 set noswapfile			" no swap file
-
 set cursorline			" show a visual line under the cursor's current line.
 
 "About Search
@@ -50,12 +49,12 @@ au FileType liquid set spell spelllang=en_us
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " run autoPEP8
-set autoread
-au BufWritePost *.py silent call AutoPEP8()
-" nnoremap <leader>pp :call AutoPEP8()<CR>
-function AutoPEP8()
-    silent execute '!autopep8 --in-place --aggressive --aggressive '.expand("%")
-endfunction
+" set autoread
+" au BufWritePost *.py silent call AutoPEP8()
+" " nnoremap <leader>pp :call AutoPEP8()<CR>
+" function AutoPEP8()
+    " silent execute '!autopep8 --in-place --aggressive --aggressive '.expand("%")
+" endfunction
 
 " Status bar
 

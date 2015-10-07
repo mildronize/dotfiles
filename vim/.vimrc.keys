@@ -33,7 +33,7 @@ nnoremap L gt
 
 " Remove a space at the last of whole file
 " For unix system
-nnoremap <silent> <Leader>rs :%s/ \n/\r/gc<CR>
+" nnoremap <silent> <Leader>rs :%s/ \n/\r/gc<CR>
 
 
 "Mapp jk to <ESC>

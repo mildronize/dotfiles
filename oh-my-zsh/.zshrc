@@ -7,7 +7,8 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="avit"
-ZSH_THEME="gallifrey"
+# ZSH_THEME="gallifrey"
+ZSH_THEME="mildronize"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"

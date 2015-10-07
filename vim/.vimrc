@@ -11,7 +11,6 @@ endif
 
 " Vim plug
 call plug#begin()
-Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
@@ -25,14 +24,18 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'reedes/vim-lexical'
 Plug 'godlygeek/tabular'
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Personal Use
 Plug 'chakrit/vim-thai-keys'
 
 call plug#end()
 
+
 " Plugin config
-for file in split(glob('~/.dotfiles/vim/.vimrc.plugins.*'), '\n')
+for file in split(glob('~/.dotfiles/vim/plugins/*.vim'), '\n')
     exe 'source' file
 endfor
 
