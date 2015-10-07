@@ -15,10 +15,13 @@
     ~/.tmux.conf: tmux/.tmux.conf
 
     # Zsh Configuration
-    ~/.zshrc: zsh/.zshrc
+    ~/.zshrc: oh-my-zsh/.zshrc
 
     # Zsh Custom Configuration
-    ~/.zshrc.local: zsh/.zshrc.local
+    ~/.zshrc.local: oh-my-zsh/.zshrc.local
+
+    # Oh My Zsh Themes
+    # ~/.oh-my-zsh/themes/gitster.zsh-theme: oh-my-zsh/themes/gitster.zsh-theme
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
