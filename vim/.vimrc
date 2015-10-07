@@ -3,6 +3,10 @@ if filereadable(expand("~/.vimrc.keys"))
 	source ~/.vimrc.keys
 endif
 
+if filereadable(expand("~/.vimrc.keys.local"))
+	source ~/.vimrc.keys.local
+endif
+
 " Plugin Management
 
 " Vim plug
