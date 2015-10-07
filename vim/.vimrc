@@ -25,6 +25,10 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'reedes/vim-lexical'
 Plug 'godlygeek/tabular'
+
+" Personal Use
+Plug 'chakrit/vim-thai-keys'
+
 call plug#end()
 
 " Plugin config
