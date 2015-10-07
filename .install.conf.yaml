@@ -1,5 +1,6 @@
 - clean: ['~']
 
+
 - link:
     # Vim Configuration
     ~/.vimrc.after: vim/.vimrc.after
@@ -16,7 +17,7 @@
     ~/.zshrc: zsh/.zshrc
 
     # Zsh Custom Configuration
-    # ~/.zshrc.local: zsh/.zshrc.local
+    ~/.zshrc.local: zsh/.zshrc.local
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
