@@ -74,6 +74,7 @@ noremap <C-l> <C-w>l
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " <Leader>h to toggle highlight.
+" http://stackoverflow.com/a/16730877
 let hlstate=0
 nnoremap <silent> <Leader>h :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
 
