@@ -23,3 +23,4 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 - Reload vim or `vimrc`
 - Install plugin by `:PlugInstall`
 
+[My Putty Sessions](https://gist.githubusercontent.com/mildronize/3ffffa30b98ddaa7d942/raw/13126c182b15289d44b352d17e0ad27d086650da/mildronize-putty-sessions.reg)
