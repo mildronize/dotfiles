@@ -1,6 +1,8 @@
 "change <Leader> / to space
 let mapleader = " "
 
+set pastetoggle=<F3>           " pastetoggle (sane indentation on pastes)
+
 " Map quick resize splits more quickly
 " Orignal from http://vim.wikia.com/wiki/Resize_splits_more_quickly
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
@@ -30,6 +32,10 @@ nnoremap <silent> <Leader>w :set wrap! linebreak!<CR>
 " Use H and L to move to the previous/next tabpage.
 nnoremap H gT
 nnoremap L gt
+
+" Work with buffer
+nnoremap <silent> <Leader>l :bnext<CR>
+nnoremap <silent> <Leader>h :bprev<CR>
 
 " Remove a space at the last of whole file
 " For unix system
