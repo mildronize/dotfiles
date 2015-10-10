@@ -2,15 +2,21 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-let g:airline_left_sep = ' '
-let g:airline_right_sep = ' '
-
-" powerline symbols
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+if $PUTTY == 'true'
+    " If it is remoted from windows or putty (Doesn't support some unicode char)
+    let g:airline_left_sep = ' '
+    let g:airline_right_sep = ' '
+    let g:airline_symbols.branch = '|B'
+    let g:airline_symbols.readonly = 'RO'
+    let g:airline_symbols.linenr = '#'
+else
+    " powerline symbols
+    let g:airline_left_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_symbols.branch = ''
+    let g:airline_symbols.readonly = ''
+    let g:airline_symbols.linenr = ''
+endif
 
 let g:airline_theme='powerlineish'
 " let g:airline_theme='durant'

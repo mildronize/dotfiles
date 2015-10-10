@@ -8,8 +8,13 @@ ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="avit"
 # ZSH_THEME="gallifrey"
-ZSH_THEME="mildronize"
-
+if [ "$PUTTY" = "true" ]
+then
+    # If it is remoted from windows
+    ZSH_THEME="mildronize"
+else
+    ZSH_THEME="agnoster"
+fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
