@@ -30,7 +30,8 @@ Plug 'airblade/vim-gitgutter'
 
 " Personal Use
 Plug 'chakrit/vim-thai-keys'
-
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-misc'
 call plug#end()
 
 
