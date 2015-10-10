@@ -20,6 +20,9 @@
     # Zsh Custom Configuration
     ~/.zshrc.local: oh-my-zsh/.zshrc.local
 
+    # Oh My Zsh Custom Configuration
+    ~/.zshrc.oh-my-zsh: oh-my-zsh/.zshrc.oh-my-zsh
+
     # Oh My Zsh Themes
     ~/.oh-my-zsh/themes/mildronize.zsh-theme: oh-my-zsh/themes/mildronize.zsh-theme
 
