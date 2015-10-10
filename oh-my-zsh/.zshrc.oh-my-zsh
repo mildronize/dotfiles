@@ -52,7 +52,7 @@ export TERM=xterm-256color
 
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
 # plugins=(git osx python pip tmux vi-mode brew terminalapp sublime history)
-plugins=(git osx python pip brew terminalapp docker sublime tmuxinator history)
+plugins=(git python pip tmuxinator common-aliases debian)
 
 # blind key in vi-mode
 # bindkey -v "jk" vi-cmd-mode
