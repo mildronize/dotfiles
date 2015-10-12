@@ -17,11 +17,12 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/python
     zgen oh-my-zsh plugins/debian
     zgen oh-my-zsh plugins/common-aliases
-    zgen load zsh-users/zsh-syntax-highlighting
+    zgen load djui/alias-tips
 
     # bulk load
     zgen loadall <<EOPLUGINS
         zsh-users/zsh-history-substring-search
+        zsh-users/zsh-syntax-highlighting
 EOPLUGINS
     # ^ can't indent this EOPLUGINS
 
@@ -29,7 +30,6 @@ EOPLUGINS
     zgen load zsh-users/zsh-completions src
 
     # theme
-    # zgen oh-my-zsh themes/arrow
 
     if [ "$PUTTY" = "true" ]
     then
