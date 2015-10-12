@@ -1,0 +1,14 @@
+# suport thai in terminal
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+#add local bin pah
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
+# short pdflatex with output in folder
+# alias pdflatex="pdflatex -output-directory=output"
+
+# make rm prompt before delete
+alias rm="/bin/rm -v"

@@ -15,16 +15,16 @@
     ~/.tmux.conf: tmux/.tmux.conf
 
     # Zsh Configuration
-    ~/.zshrc: oh-my-zsh/.zshrc
+    ~/.zshrc: zsh/.zshrc
+
+    # ZgenCustom Configuration
+    ~/.zshrc.zgen: zsh/.zshrc.zgen
 
     # Zsh Custom Configuration
-    ~/.zshrc.local: oh-my-zsh/.zshrc.local
-
-    # Oh My Zsh Custom Configuration
-    ~/.zshrc.oh-my-zsh: oh-my-zsh/.zshrc.oh-my-zsh
+    ~/.zshrc.local: zsh/.zshrc.local
 
     # Oh My Zsh Themes
-    ~/.oh-my-zsh/themes/mildronize.zsh-theme: oh-my-zsh/themes/mildronize.zsh-theme
+    # ~/.oh-my-zsh/themes/mildronize.zsh-theme: oh-my-zsh/themes/mildronize.zsh-theme
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

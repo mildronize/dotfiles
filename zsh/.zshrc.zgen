@@ -1,0 +1,44 @@
+# load zgen
+source "${HOME}/.dotfiles/zsh/tools/zgen/zgen.zsh"
+
+# Fix not same color inside tmux of xfce4-terminal http://unix.stackexchange.com/questions/139082/zsh-set-term-screen-256color-in-tmux-but-xterm-256color-without-tmux
+export TERM=xterm-256color
+
+# check if there's no init script
+if ! zgen saved; then
+    echo "Creating a zgen save"
+
+    zgen oh-my-zsh
+
+    # plugins
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh plugins/python
+    zgen oh-my-zsh plugins/debian
+    zgen oh-my-zsh plugins/common-aliases
+    zgen load zsh-users/zsh-syntax-highlighting
+
+    # bulk load
+    zgen loadall <<EOPLUGINS
+        zsh-users/zsh-history-substring-search
+EOPLUGINS
+    # ^ can't indent this EOPLUGINS
+
+    # completions
+    zgen load zsh-users/zsh-completions src
+
+    # theme
+    # zgen oh-my-zsh themes/arrow
+
+    if [ "$PUTTY" = "true" ]
+    then
+        # If it is remoted from windows
+        zgen oh-my-zsh themes/robbyrussell
+    else
+        zgen oh-my-zsh themes/agnoster
+    fi
+
+    # save all to init script
+    zgen save
+fi

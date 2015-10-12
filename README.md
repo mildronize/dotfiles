@@ -6,12 +6,12 @@ This is new dotfiles of me.
 - To use [Dotbot](https://github.com/anishathalye/dotbot/) to create symbolink to my home automatically
 - Use [Vim Plug]
 The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
+- Use [Zgen](https://github.com/tarjoilija/zgen) to manage [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) and zsh plugins
 
 > **Note:** This version is only install all things, next, I will seperate it.
 
 ## Install
 - `./init` for installing [Vim Plug] that it can manage many vim plugins
-- *Optional*: Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) and thier configs by `oh-my-zsh/install`
 - `./dotbot`
 - Run `vim`
 - Install plugin by `:PlugInstall`
