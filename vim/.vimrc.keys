@@ -84,6 +84,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 let hlstate=0
 nnoremap <silent> <Leader>hs :if (hlstate%2 == 0) \| nohlsearch \| else \| set hlsearch \| endif \| let hlstate=hlstate+1<cr>
 
+" From spf13
 " Allow to trigger background
 function! ToggleBG()
     let s:tbg = &background
@@ -95,3 +96,5 @@ function! ToggleBG()
     endif
 endfunction
 noremap <leader>bg :call ToggleBG()<CR>
+
+inoremap <C-l> <C-o>A " Run out the brackets"

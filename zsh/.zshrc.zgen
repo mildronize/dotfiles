@@ -18,6 +18,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/debian
     zgen oh-my-zsh plugins/common-aliases
     zgen load djui/alias-tips
+    zgen load rummik/nvm-zsh  # Node Version Management
 
     # bulk load
     zgen loadall <<EOPLUGINS
