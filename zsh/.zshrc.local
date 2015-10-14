@@ -12,3 +12,7 @@ export PATH=/usr/local/sbin:$PATH
 
 # make rm prompt before delete
 alias rm="/bin/rm -v"
+
+# setup Solarized dircolors plugin for zsh
+# https://github.com/joel-porquet/zsh-dircolors-solarized
+setupsolarized

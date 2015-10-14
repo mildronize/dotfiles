@@ -24,6 +24,7 @@ if ! zgen saved; then
     zgen loadall <<EOPLUGINS
         zsh-users/zsh-history-substring-search
         zsh-users/zsh-syntax-highlighting
+        joel-porquet/zsh-dircolors-solarized
 EOPLUGINS
     # ^ can't indent this EOPLUGINS
 
@@ -43,3 +44,6 @@ EOPLUGINS
     # save all to init script
     zgen save
 fi
+
+#run reset Zgen bootstrap & reload source ~/.zshrc
+alias rezsh="zgen reset & source ~/.zshrc"
