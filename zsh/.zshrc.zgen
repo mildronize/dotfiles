@@ -2,7 +2,7 @@
 source "${HOME}/.dotfiles/zsh/tools/zgen/zgen.zsh"
 
 # Fix not same color inside tmux of xfce4-terminal http://unix.stackexchange.com/questions/139082/zsh-set-term-screen-256color-in-tmux-but-xterm-256color-without-tmux
-export TERM=xterm-256color
+# export TERM=xterm-256color
 
 # check if there's no init script
 if ! zgen saved; then
@@ -18,7 +18,8 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/debian
     zgen oh-my-zsh plugins/common-aliases
     zgen load djui/alias-tips
-    zgen load rummik/nvm-zsh  # Node Version Management
+    zgen load rummik/nvm-zsh           # Node Version Management
+    zgen load chrissicool/zsh-256color # Set terminal to 256 colors
 
     # bulk load
     zgen loadall <<EOPLUGINS
