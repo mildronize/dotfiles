@@ -14,8 +14,7 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 - `./init` for installing [Vim Plug] that it can manage many vim plugins
 - `./dotbot`
 - `source ~/.zshrc` to install oh-my-zsh
-- Run `vim`
-- Install plugin by `:PlugInstall`
+- Run `vim +PlugInstall +qall` or run `vim`, then installing plugin by `:PlugInstall`
 
 ## Update Dotfiles
 - `./dotbot`
