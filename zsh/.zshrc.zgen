@@ -1,9 +1,6 @@
 # load zgen
 source "${HOME}/.dotfiles/zsh/tools/zgen/zgen.zsh"
 
-# Fix not same color inside tmux of xfce4-terminal http://unix.stackexchange.com/questions/139082/zsh-set-term-screen-256color-in-tmux-but-xterm-256color-without-tmux
-# export TERM=xterm-256color
-
 # check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
@@ -17,17 +14,14 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/python
     zgen oh-my-zsh plugins/debian
     zgen oh-my-zsh plugins/common-aliases
-    zgen load djui/alias-tips
-    zgen load rummik/nvm-zsh           # Node Version Management
-    zgen load chrissicool/zsh-256color # Set terminal to 256 colors
 
-    # bulk load
-    zgen loadall <<EOPLUGINS
-        zsh-users/zsh-history-substring-search
-        zsh-users/zsh-syntax-highlighting
-        joel-porquet/zsh-dircolors-solarized
-EOPLUGINS
-    # ^ can't indent this EOPLUGINS
+    zgen load djui/alias-tips                        # If you can't remember alias, it can tell you
+    zgen load rummik/nvm-zsh                         # Node Version Management
+    zgen load chrissicool/zsh-256color               # Set terminal to 256 colors
+
+    zgen load zsh-users/zsh-history-substring-search #
+    zgen load zsh-users/zsh-syntax-highlighting      #
+    zgen load joel-porquet/zsh-dircolors-solarized   # Fix dir color for solarized colorscheme
 
     # completions
     zgen load zsh-users/zsh-completions src
@@ -37,7 +31,8 @@ EOPLUGINS
     if [ "$PUTTY" = "true" ]
     then
         # If it is remoted from windows
-        zgen oh-my-zsh themes/robbyrussell
+        # zgen oh-my-zsh themes/robbyrussell
+        zgen oh-my-zsh themes/afowler
     else
         zgen oh-my-zsh themes/agnoster
     fi
@@ -47,4 +42,4 @@ EOPLUGINS
 fi
 
 #run reset Zgen bootstrap & reload source ~/.zshrc
-alias rezsh="zgen reset & source ~/.zshrc"
+alias rezsh="zgen reset && source ~/.zshrc"
