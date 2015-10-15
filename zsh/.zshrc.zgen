@@ -31,9 +31,11 @@ if ! zgen saved; then
     if [ "$PUTTY" = "true" ]
     then
         # If it is remoted from windows
-        # zgen oh-my-zsh themes/robbyrussell
-        zgen oh-my-zsh themes/afowler
+        # zgen oh-my-zsh themes/blinks
+        # zgen oh-my-zsh themes/dst
+        zgen oh-my-zsh themes/eastwood
     else
+
         zgen oh-my-zsh themes/agnoster
     fi
 

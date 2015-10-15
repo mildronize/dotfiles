@@ -24,11 +24,13 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'reedes/vim-lexical'
 Plug 'godlygeek/tabular'
-" Git
+Plug 'tpope/vim-repeat'                " Required by vim-easyclip
+Plug 'christoomey/vim-system-copy'
+                                       " Git
 Plug 'tpope/vim-fugitive'              " Easy to use git tools
 Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes
 
-" Personal Use
+                                       " Personal Use
 Plug 'chakrit/vim-thai-keys'           " Allow use Thai char to control Vim
 Plug 'xolox/vim-colorscheme-switcher'  " Press <F8> to change vim color scheme
 Plug 'xolox/vim-misc'
