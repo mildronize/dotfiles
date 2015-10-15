@@ -16,21 +16,21 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar'
 Plug 'ervandew/supertab'
-Plug 'jiangmiao/auto-pairs'
-Plug 'flazz/vim-colorschemes'
-Plug 'bling/vim-airline'
-Plug 'zhaocai/GoldenView.Vim'
+Plug 'jiangmiao/auto-pairs'            " When press any brackets, it can make a pair of the bracket.
+Plug 'flazz/vim-colorschemes'          " A large collection of Vim color schemes
+Plug 'bling/vim-airline'               " More Function & theme in Vim status bar
+Plug 'zhaocai/GoldenView.Vim'          " Auto zoom (extended window size) when active a window
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'reedes/vim-lexical'
 Plug 'godlygeek/tabular'
 " Git
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'              " Easy to use git tools
+Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes
 
 " Personal Use
-Plug 'chakrit/vim-thai-keys'
-Plug 'xolox/vim-colorscheme-switcher'
+Plug 'chakrit/vim-thai-keys'           " Allow use Thai char to control Vim
+Plug 'xolox/vim-colorscheme-switcher'  " Press <F8> to change vim color scheme
 Plug 'xolox/vim-misc'
 call plug#end()
 
