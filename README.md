@@ -34,3 +34,6 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 
 [Vim Plug]: https://github.com/junegunn/vim-plug.git
 
+## Mapping Keys
+
+### Overriding Basic key

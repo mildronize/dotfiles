@@ -17,6 +17,11 @@ set softtabstop=4               " Let backspace delete indent
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 set splitright                  " Puts new vsplit windows to the right of the current
 set splitbelow                  " Puts new split windows to the bottom of the current
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+
+" Change the matches brackets with red bold
+highlight MatchParen cterm=bold ctermfg=red
 
 set noswapfile			" no swap file
 set cursorline			" show a visual line under the cursor's current line.
