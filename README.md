@@ -48,6 +48,9 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 [Vim Plug]: https://github.com/junegunn/vim-plug.git
 
 # Vim
+Vim Usage:
+- See in [Multi-language Vim Cheat sheet](http://sim.rtorr.com)
+- มีภาษาไทยด้วยนะเออ ดูได้ใน [คู่มือการใช้ Vim ฉบับย่อ](http://vim.rtorr.com/lang/th/)
 ## Features
 - Auto `PASTE` mode when pasting in insert mode
 ## My Mapping Keys
