@@ -36,6 +36,7 @@ Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the
 Plug 'chakrit/vim-thai-keys'           " Allow use Thai char to control Vim
 Plug 'xolox/vim-colorscheme-switcher'  " Press <F8> to change vim color scheme
 Plug 'xolox/vim-misc'
+Plug 'suan/vim-instant-markdown'
 call plug#end()
 
 

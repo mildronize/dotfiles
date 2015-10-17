@@ -45,25 +45,14 @@ inoremap kj <ESC>
 set incsearch
 set hlsearch
 
-"Disable arrow key
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
 " use motion work with display line
-nnoremap k gk
-nnoremap gk k
-nnoremap j gj
-nnoremap gj j
-nnoremap $ g$
-nnoremap ^ g^
-nnoremap 0 g0
+" nnoremap k gk
+" nnoremap gk k
+" nnoremap j gj
+" nnoremap gj j
+" nnoremap $ g$
+" nnoremap ^ g^
+" nnoremap 0 g0
 
 "move between windows
 noremap <C-h> <C-w>h
