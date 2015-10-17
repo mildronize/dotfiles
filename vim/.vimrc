@@ -16,7 +16,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar'
 Plug 'ervandew/supertab'
-Plug 'jiangmiao/auto-pairs'            " When press any brackets, it can make a pair of the bracket.
 Plug 'flazz/vim-colorschemes'          " A large collection of Vim color schemes
 Plug 'bling/vim-airline'               " More Function & theme in Vim status bar
 Plug 'zhaocai/GoldenView.Vim'          " Auto zoom (extended window size) when active a window
@@ -24,8 +23,11 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ap/vim-css-color'
 Plug 'reedes/vim-lexical'
 Plug 'godlygeek/tabular'
-Plug 'tpope/vim-repeat'                " Required by vim-easyclip
+Plug 'tpope/vim-repeat'                " It can make repeat the all commmands
 Plug 'christoomey/vim-system-copy'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-surround'
                                        " Git
 Plug 'tpope/vim-fugitive'              " Easy to use git tools
 Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes
