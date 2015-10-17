@@ -10,6 +10,10 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 
 > **Note:** This version is only install all things, next, I will seperate it.
 
+## Prerequisites
+- `virtualenv`
+- `xsel`
+
 ## Install
 - `./init` for installing [Vim Plug] that it can manage many vim plugins
 - `./dotbot`
