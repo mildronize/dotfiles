@@ -36,9 +36,11 @@ Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the
 " JS
 " Plug 'marijnh/tern_for_vim'
 " after install please run `npm install`
-Plug 'maksimr/vim-jsbeautify'
-Plug 'Chiel92/vim-autoformat'
+" Plug 'maksimr/vim-jsbeautify'
+" Plug 'Chiel92/vim-autoformat'
 Plug 'mxw/vim-jsx'
+" Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'ibotdotout/vimrc-custom'
 
                                        " Personal Use
 Plug 'chakrit/vim-thai-keys'           " Allow use Thai char to control Vim
