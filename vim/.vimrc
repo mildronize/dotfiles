@@ -33,6 +33,13 @@ Plug 'myusuf3/numbers.vim'
 Plug 'tpope/vim-fugitive'              " Easy to use git tools
 Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes
 
+" JS
+" Plug 'marijnh/tern_for_vim'
+" after install please run `npm install`
+Plug 'maksimr/vim-jsbeautify'
+Plug 'Chiel92/vim-autoformat'
+Plug 'mxw/vim-jsx'
+
                                        " Personal Use
 Plug 'chakrit/vim-thai-keys'           " Allow use Thai char to control Vim
 Plug 'xolox/vim-colorscheme-switcher'  " Press <F8> to change vim color scheme
