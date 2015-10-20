@@ -29,6 +29,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'myusuf3/numbers.vim'
+Plug 'nathanaelkane/vim-indent-guides'
                                        " Git
 Plug 'tpope/vim-fugitive'              " Easy to use git tools
 Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes
@@ -38,7 +39,7 @@ Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the
 " after install please run `npm install`
 " Plug 'maksimr/vim-jsbeautify'
 " Plug 'Chiel92/vim-autoformat'
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 " Plug 'othree/javascript-libraries-syntax.vim'
 " Plug 'ibotdotout/vimrc-custom'
 
