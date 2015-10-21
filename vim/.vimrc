@@ -30,6 +30,10 @@ Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 Plug 'myusuf3/numbers.vim'
 Plug 'nathanaelkane/vim-indent-guides'
+
+Plug 'jlanzarotta/bufexplorer'
+Plug 'tmhedberg/matchit'
+Plug 'kien/ctrlp.vim'
                                        " Git
 Plug 'tpope/vim-fugitive'              " Easy to use git tools
 Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes

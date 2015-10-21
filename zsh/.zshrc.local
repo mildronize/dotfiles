@@ -1,11 +1,6 @@
-# suport thai in terminal
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-#add local bin pah
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
+# My local PATH
+export PATH=$HOME/Programs/zotero:$PATH
+export PATH=$HOME/Programs/aard2:$PATH
 
 # short pdflatex with output in folder
 # alias pdflatex="pdflatex -output-directory=output"
@@ -23,3 +18,5 @@ echo "dircolors.256dark" > $HOME/.zsh-dircolors.config
 
 # Open with run :PlugInstall
 alias vimp="vim +PlugInstall +q"
+
+
