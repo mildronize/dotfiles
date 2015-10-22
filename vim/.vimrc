@@ -34,6 +34,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'tmhedberg/matchit'
 Plug 'kien/ctrlp.vim'
+" Plug 'Shougo/neocomplete.vim'
                                        " Git
 Plug 'tpope/vim-fugitive'              " Easy to use git tools
 Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes
@@ -60,10 +61,11 @@ for file in split(glob('~/.dotfiles/vim/plugins/*.vim'), '\n')
     exe 'source' file
 endfor
 
+if filereadable(expand("~/.vimrc.after"))
+	source ~/.vimrc.after
+endif
+
 if filereadable(expand("~/.vimrc.local"))
 	source ~/.vimrc.local
 endif
 
-if filereadable(expand("~/.vimrc.after"))
-	source ~/.vimrc.after
-endif
