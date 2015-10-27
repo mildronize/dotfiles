@@ -115,7 +115,7 @@ Copy the selected text into system clipboard       | <kbd>c</kbd><kbd>p</kbd>
 
 Read more at [System Copy]
 
-[System Copy]: https://github.com/scrooloose/nerdtree
+[System Copy]: https://github.com/christoomey/vim-system-copy
 
 ### Quick comment code by [NERDcommenter]
 
