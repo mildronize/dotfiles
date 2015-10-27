@@ -34,7 +34,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'tmhedberg/matchit'
 Plug 'kien/ctrlp.vim'
-" Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neocomplete.vim'
                                        " Git
 Plug 'tpope/vim-fugitive'              " Easy to use git tools
 Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes
