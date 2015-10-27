@@ -54,6 +54,7 @@ Vim Usage:
 
 ## Features
 - Auto `PASTE` mode when pasting in insert mode
+
 ## My Mapping Keys
 ### Overriding Basic key
 File: `~/.vimrc.keys`
