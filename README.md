@@ -27,10 +27,13 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
       * [Quick comment code by <a href="https://github.com/scrooloose/nerdcommenter">NERDcommenter</a> ](#quick-comment-code-by-nerdcommenter)
       * [Quick aligning code by <a href="https://github.com/godlygeek/tabular">Tabular</a> ](#quick-aligning-code-by-tabular)
 
+## Prerequisite
+- `git curl zsh tmux vim`
+
 ## Install
 - `./init` for installing [Vim Plug] that it can manage many vim plugins
 - `./dotbot`
-- Run `rezsh` or `zgen reset && source ~/.zshrc` to install oh-my-zsh
+- Run `zsh` to run zsh and install their plugins oh-my-zsh
 - Run `vim +PlugInstall +qall` or run `vim`, then installing plugin by `:PlugInstall`
 
 ## Update Dotfiles
