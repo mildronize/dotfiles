@@ -49,13 +49,13 @@ set incsearch
 set hlsearch
 
 " use motion work with display line
-" nnoremap k gk
-" nnoremap gk k
-" nnoremap j gj
-" nnoremap gj j
-" nnoremap $ g$
-" nnoremap ^ g^
-" nnoremap 0 g0
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+nnoremap $ g$
+nnoremap ^ g^
+nnoremap 0 g0
 
 "move between windows
 noremap <C-h> <C-w>h

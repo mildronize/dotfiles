@@ -46,13 +46,14 @@ Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the
 " Plug 'Chiel92/vim-autoformat'
 " Plug 'mxw/vim-jsx'
 " Plug 'othree/javascript-libraries-syntax.vim'
-" Plug 'ibotdotout/vimrc-custom'
+Plug 'ibotdotout/vimrc-custom'
+Plug 'ibotdotout/vim-thai-tags-latex'
 
                                        " Personal Use
 Plug 'chakrit/vim-thai-keys'           " Allow use Thai char to control Vim
 Plug 'xolox/vim-colorscheme-switcher'  " Press <F8> to change vim color scheme
 Plug 'xolox/vim-misc'
-Plug 'suan/vim-instant-markdown'
+" Plug 'suan/vim-instant-markdown'
 call plug#end()
 
 
