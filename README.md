@@ -31,6 +31,8 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 - `git curl zsh tmux vim`
 
 ## Install
+- `git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles`
+- `cd ~/.dotfiles`
 - `./init` for installing [Vim Plug] that it can manage many vim plugins
 - `./dotbot`
 - Run `zsh` to run zsh and install their plugins oh-my-zsh
