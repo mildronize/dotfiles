@@ -28,32 +28,17 @@ Plug 'christoomey/vim-system-copy'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
-Plug 'myusuf3/numbers.vim'
-Plug 'nathanaelkane/vim-indent-guides'
 
-Plug 'jlanzarotta/bufexplorer'
-Plug 'tmhedberg/matchit'
 Plug 'kien/ctrlp.vim'
-Plug 'Shougo/neocomplete.vim'
                                        " Git
 Plug 'tpope/vim-fugitive'              " Easy to use git tools
 Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes
 
-" JS
-" Plug 'marijnh/tern_for_vim'
-" after install please run `npm install`
-" Plug 'maksimr/vim-jsbeautify'
-" Plug 'Chiel92/vim-autoformat'
-" Plug 'mxw/vim-jsx'
-" Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'ibotdotout/vimrc-custom'
-Plug 'ibotdotout/vim-thai-tags-latex'
 
                                        " Personal Use
-Plug 'chakrit/vim-thai-keys'           " Allow use Thai char to control Vim
+" Plug 'chakrit/vim-thai-keys'           " Allow use Thai char to control Vim
 Plug 'xolox/vim-colorscheme-switcher'  " Press <F8> to change vim color scheme
 Plug 'xolox/vim-misc'
-" Plug 'suan/vim-instant-markdown'
 call plug#end()
 
 

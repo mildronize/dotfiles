@@ -30,11 +30,14 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 ## Install
 - `./init` for installing [Vim Plug] that it can manage many vim plugins
 - `./dotbot`
-- `source ~/.zshrc` to install oh-my-zsh
+- Run `rezsh` or `zgen reset && source ~/.zshrc` to install oh-my-zsh
 - Run `vim +PlugInstall +qall` or run `vim`, then installing plugin by `:PlugInstall`
 
 ## Update Dotfiles
 - `./dotbot`
+
+## Update zsh config
+- `rezsh` or `zgen reset && source ~/.zshrc`
 
 ## Add Plugin
 - Add plugin name in `~/.vimrc`
