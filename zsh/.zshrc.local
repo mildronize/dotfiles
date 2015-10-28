@@ -1,11 +1,6 @@
-# suport thai in terminal
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-#add local bin pah
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
+# My local PATH
+export PATH=$HOME/Programs/zotero:$PATH
+export PATH=$HOME/Programs/aard2:$PATH
 
 # short pdflatex with output in folder
 # alias pdflatex="pdflatex -output-directory=output"
@@ -23,3 +18,25 @@ echo "dircolors.256dark" > $HOME/.zsh-dircolors.config
 
 # Open with run :PlugInstall
 alias vimp="vim +PlugInstall +q"
+
+# upgrade debian
+alias deb-upgrade="sudo aptitude update && sudo aptitude upgrade"
+
+# grep option
+alias grep="grep --color=always"
+# ack option
+alias ack="ack --color"
+
+# http://stackoverflow.com/a/23389099
+# hightlight color with grep
+function greph {
+    grep -E "$1|$" $2
+}
+
+# kill process with pid
+alias killp="kill -KILL"
+
+# http://stackoverflow.com/a/18339127
+function cpfind {
+    find . -name "$1" -type f -exec cp {} $2 \;
+}

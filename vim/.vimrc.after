@@ -1,7 +1,5 @@
 set nocompatible 		    " use vim, not vi api
 set t_Co=256 			    " support screen-256color
-set background=dark         " Assume a dark background"
-" colorscheme solarized
 
 " disable auto comment insert
 autocmd FileType * setlocal formatoptions-=cro
@@ -69,3 +67,5 @@ set statusline+=Line:%l/%L[%p%%]
 set statusline+=Col:%v
 set statusline+=Buf:#%n
 set statusline+=[%b][0x%B]
+
+set background=dark         " Assume a dark background"

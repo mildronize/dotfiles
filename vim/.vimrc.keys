@@ -18,7 +18,10 @@ map <silent> [s :?\\\(sub\)\{,2}section\s*{<CR> :noh<CR>
 
 
 " Remap tagbar openAutoClose
-nnoremap <silent> <leader>y :TagbarOpenAutoClose<CR>
+nnoremap <silent> <leader>Y :TagbarOpenAutoClose<CR>
+
+" Remap tagbar openAutoClose
+nnoremap <silent> <leader>y :TagbarToggle<CR>
 
 " Toggle word wrapping
 nnoremap <silent> <Leader>w :set wrap! linebreak!<CR>
@@ -46,13 +49,13 @@ set incsearch
 set hlsearch
 
 " use motion work with display line
-" nnoremap k gk
-" nnoremap gk k
-" nnoremap j gj
-" nnoremap gj j
-" nnoremap $ g$
-" nnoremap ^ g^
-" nnoremap 0 g0
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+nnoremap $ g$
+nnoremap ^ g^
+nnoremap 0 g0
 
 "move between windows
 noremap <C-h> <C-w>h
