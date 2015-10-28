@@ -12,7 +12,7 @@
     # ~/.vimrc.keys.local: vim/.vimrc.keys.local
 
     # TMUX Configuration
-    ~/.tmux.conf: tmux/.tmux.conf
+    # ~/.tmux.conf: tmux/.tmux.conf
 
     # Zsh Configuration
     ~/.zshrc: zsh/.zshrc
