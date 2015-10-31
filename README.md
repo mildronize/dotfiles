@@ -1,21 +1,29 @@
 # dotfiles
-This is new dotfiles of me.
+A dotfiles boilerplate that anyone can fork it to save own configuration and ready to use. It contains [Vim](http://www.vim.org), [Zsh](http://www.zsh.org) with [Oh-my-zsh] and [Tmux](https://tmux.github.io/) configurations.
 
 **Features**
 - To reduce tightly coupled in each tool from [my previous version](https://github.com/mildronize/dotfiles-legacy) (forked from [ibotdotout](https://github.com/ibotdotout/dotfiles))
 - To use [Dotbot](https://github.com/anishathalye/dotbot/) to create symbolink to my home automatically
 - Use [Vim Plug]
 The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
-- Use [Zgen](https://github.com/tarjoilija/zgen) to manage [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) and zsh plugins
+- Use [Zgen](https://github.com/tarjoilija/zgen) to manage [Oh-my-zsh] and zsh plugins
 
+### How to use my dotfiles
+1. Fork this repository
+2. Commit your own configurations
+
+[Oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 > **Note:** This version is only install all things, next, I will seperate it.
 
 ## Contents
   * [dotfiles](#dotfiles)
-    * [Install](#install)
-    * [Update Dotfiles](#update-dotfiles)
-    * [Add Plugin](#add-plugin)
-    * [For Putty](#for-putty)
+    * [Usage](#usage)
+        * [Installation](#installation)
+        * [Update Dotfiles](#update-dotfiles)
+        * [Update zsh config](#update-zsh-config)
+        * [Add Vim Plugin](#add-vim-plugin)
+        * [For Putty](#for-putty)
+  * [Managing your custom configurations](#managing-your-custom-configurations)
   * [Vim](#vim)
     * [Features](#features)
     * [My Mapping Keys](#my-mapping-keys)
@@ -27,10 +35,10 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
       * [Quick comment code by <a href="https://github.com/scrooloose/nerdcommenter">NERDcommenter</a> ](#quick-comment-code-by-nerdcommenter)
       * [Quick aligning code by <a href="https://github.com/godlygeek/tabular">Tabular</a> ](#quick-aligning-code-by-tabular)
 
-## Prerequisite
-- `git curl zsh tmux vim`
+## Usage
 
-## Install
+### Installation
+- Make sure you installed `git curl zsh tmux vim`
 - `git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `./init` for installing [Vim Plug] that it can manage many vim plugins
@@ -38,27 +46,44 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 - Run `zsh` to run zsh and install their plugins oh-my-zsh
 - Run `vim +PlugInstall +qall` or run `vim`, then installing plugin by `:PlugInstall`
 
-## Update Dotfiles
+### Update Dotfiles
 - `./dotbot`
 
-## Update zsh config
+### Update zsh config
 - `rezsh` or `zgen reset && source ~/.zshrc`
 
-## Add Plugin
+### Add Vim Plugin
 - Add plugin name in `~/.vimrc`
 - Reload vim config `:source ~/.vimrc` or Reopen vim
 - Install & Update plugin by using `:PlugInstall`
 
-## For Putty
+### For Putty
 - [My Putty Configuration](https://gist.githubusercontent.com/mildronize/3ffffa30b98ddaa7d942/raw/13126c182b15289d44b352d17e0ad27d086650da/mildronize-putty-sessions.reg)
 - Run `export PUTTY=true`
 
+### Install Powerline fonts
+- Support on Linux and Windows
+- <https://github.com/powerline/fonts>
+
 [Vim Plug]: https://github.com/junegunn/vim-plug.git
+
+## Managing your custom configurations
+- Edit your custom configurations
+    ```
+    Config for zsh        : zsh/.zshrc.local
+    Config for Vim        : vim/.vimrc.local
+    Config for Vim key    : vim/.vimrc.key.local
+    Config for Vim Plugin : vim/plugin/*.vim
+    ```
+- Uncomment or add your config files what you place into your `$HOME` path at `.install.conf.yaml`
+    > Note: This file uses [yaml](http://yaml.org/) format
+- Create new symbolinks of your dotfiles with [dotbot](https://github.com/anishathalye/dotbot/) using `./dotbot`
+    > Note: If you got some error, you should cope your existing dotfiles. 
 
 # Vim
 Vim Usage:
 - See in [Multi-language Vim Cheat sheet](http://sim.rtorr.com)
-- มีภาษาไทยด้วยนะเออ ดูได้ใน [คู่มือการใช้ Vim ฉบับย่อ](http://vim.rtorr.com/lang/th/)
+- มีภาษาไทยด้วยนะ ดูได้ใน [คู่มือการใช้ Vim ฉบับย่อ](http://vim.rtorr.com/lang/th/)
 
 ## Features
 - Auto `PASTE` mode when pasting in insert mode
