@@ -46,7 +46,7 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 - Make sure you installed `git curl zsh tmux vim`
 - Clone this repo or your folk repo. Ex.
 ```
-git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles && cd ~/.dotfiles/install
+git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles && ~/.dotfiles/install
 ```
 ### Update All
 Update all dotfiles links, Reinstall zsh plugin & Resource `.zshrc`, Reinstall vim plugin

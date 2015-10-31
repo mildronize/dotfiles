@@ -7,8 +7,8 @@ hash zsh 2>/dev/null || { echo >&2 "zsh isn't installed.  Aborting."; exit 1; }
 hash tmux 2>/dev/null || { echo >&2 "tmux isn't installed.  Aborting."; exit 1; }
 hash vim 2>/dev/null || { echo >&2 "vim isn't installed.  Aborting."; exit 1; }
 
-TARGET_PATH="~/.dotfiles"
-VIMPLUG_PATH="~/.vim/autoload/plug.vim"
+TARGET_PATH="$HOME/.dotfiles"
+VIMPLUG_PATH="$HOME/.vim/autoload/plug.vim"
 
 # Install Vim Plug
 if [ ! -f "$VIMPLUG_PATH" ]; then
@@ -19,13 +19,9 @@ else
 fi
 
 # Run dotbot
-$TARGET_PATH/dotbot
-
-# Run vim plug
-vim +PlugInstall +qall
-
-# Run zsh
-zsh
+$TARGET_PATH/dotbot && \
+    vim +PlugInstall +qall && \
+    zsh
 
 
 
