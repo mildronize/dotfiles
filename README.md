@@ -17,13 +17,12 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 
 ## Contents
   * [dotfiles](#dotfiles)
-    * [Usage](#usage)
-        * [Installation](#installation)
-        * [Update Dotfiles](#update-dotfiles)
-        * [Update zsh config](#update-zsh-config)
-        * [Add Vim Plugin](#add-vim-plugin)
-        * [For Putty](#for-putty)
-        * [Install Powerline fonts](#install-powerline-fonts)
+  * [Usage](#usage)
+    * [Quick Setup](#quick-setup)
+    * [Manual](#manual)
+    * [Add Vim Plugin](#add-vim-plugin)
+    * [For Putty](#for-putty)
+    * [Install Powerline fonts](#install-powerline-fonts)
   * [Managing your custom configurations](#managing-your-custom-configurations)
   * [Vim](#vim)
     * [Features](#features)
@@ -36,8 +35,27 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
       * [Quick comment code by <a href="https://github.com/scrooloose/nerdcommenter">NERDcommenter</a> ](#quick-comment-code-by-nerdcommenter)
       * [Quick aligning code by <a href="https://github.com/godlygeek/tabular">Tabular</a> ](#quick-aligning-code-by-tabular)
 
-## Usage
+# Usage
+2 ways to use
 
+1. quick setup or
+2. manual
+
+## Quick setup
+### Installation
+- Make sure you installed `git curl zsh tmux vim`
+- Clone this repo or your folk repo. Ex.
+```
+git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles && cd ~/.dotfiles/install
+```
+### Update All
+Update all dotfiles links, Reinstall zsh plugin & Resource `.zshrc`, Reinstall vim plugin
+
+```
+dotup
+```
+
+## Manual
 ### Installation
 - Make sure you installed `git curl zsh tmux vim`
 - `git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles`
@@ -53,16 +71,16 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 ### Update zsh config
 - `rezsh` or `zgen reset && source ~/.zshrc`
 
-### Add Vim Plugin
+## Add Vim Plugin
 - Add plugin name in `~/.vimrc`
 - Reload vim config `:source ~/.vimrc` or Reopen vim
 - Install & Update plugin by using `:PlugInstall`
 
-### For Putty
+## For Putty
 - [My Putty Configuration](https://gist.githubusercontent.com/mildronize/3ffffa30b98ddaa7d942/raw/13126c182b15289d44b352d17e0ad27d086650da/mildronize-putty-sessions.reg)
 - Run `export PUTTY=true`
 
-### Install Powerline fonts
+## Install Powerline fonts
 - Support on Linux and Windows
 - <https://github.com/powerline/fonts>
 

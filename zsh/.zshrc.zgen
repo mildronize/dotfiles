@@ -46,3 +46,7 @@ fi
 
 #run reset Zgen bootstrap & reload source ~/.zshrc
 alias rezsh="zgen reset && source ~/.zshrc"
+
+# Update config
+alias dotup="$HOME/.dotfiles/update && rezsh"
+
