@@ -23,6 +23,7 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
         * [Update zsh config](#update-zsh-config)
         * [Add Vim Plugin](#add-vim-plugin)
         * [For Putty](#for-putty)
+        * [Install Powerline fonts](#install-powerline-fonts)
   * [Managing your custom configurations](#managing-your-custom-configurations)
   * [Vim](#vim)
     * [Features](#features)
@@ -69,16 +70,19 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 
 ## Managing your custom configurations
 - Edit your custom configurations
-    ```
-    Config for zsh        : zsh/.zshrc.local
-    Config for Vim        : vim/.vimrc.local
-    Config for Vim key    : vim/.vimrc.key.local
-    Config for Vim Plugin : vim/plugin/*.vim
-    ```
+```
+Config for zsh        : zsh/.zshrc.local
+Config for Vim        : vim/.vimrc.local
+Config for Vim key    : vim/.vimrc.key.local
+Config for Vim Plugin : vim/plugin/*.vim
+```
 - Uncomment or add your config files what you place into your `$HOME` path at `.install.conf.yaml`
-    > Note: This file uses [yaml](http://yaml.org/) format
+
+ > Note: This file uses [yaml](http://yaml.org/) format
+
 - Create new symbolinks of your dotfiles with [dotbot](https://github.com/anishathalye/dotbot/) using `./dotbot`
-    > Note: If you got some error, you should cope your existing dotfiles. 
+
+ > Note: If you got some error, you should cope your existing dotfiles. 
 
 # Vim
 Vim Usage:
