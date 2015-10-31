@@ -8,8 +8,8 @@
     ~/.vimrc: vim/.vimrc
 
     # Vim Custom Configuration
-    # ~/.vimrc.local: vim/.vimrc.local
-    # ~/.vimrc.keys.local: vim/.vimrc.keys.local
+    ~/.vimrc.local: vim/.vimrc.local
+    ~/.vimrc.keys.local: vim/.vimrc.keys.local
 
     # TMUX Configuration
     ~/.tmux.conf: tmux/.tmux.conf
@@ -21,7 +21,7 @@
     ~/.zshrc.zgen: zsh/.zshrc.zgen
 
     # Zsh Custom Configuration
-    # ~/.zshrc.local: zsh/.zshrc.local
+    ~/.zshrc.local: zsh/.zshrc.local
 
     # Oh My Zsh Themes
     # ~/.oh-my-zsh/themes/mildronize.zsh-theme: oh-my-zsh/themes/mildronize.zsh-theme
