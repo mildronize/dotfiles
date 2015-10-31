@@ -7,24 +7,21 @@
     ~/.vimrc.keys: vim/.vimrc.keys
     ~/.vimrc: vim/.vimrc
 
-    # Vim Custom Configuration
-    ~/.vimrc.local: vim/.vimrc.local
-    ~/.vimrc.keys.local: vim/.vimrc.keys.local
-
     # TMUX Configuration
     ~/.tmux.conf: tmux/.tmux.conf
 
     # Zsh Configuration
     ~/.zshrc: zsh/.zshrc
-
     # ZgenCustom Configuration
     ~/.zshrc.zgen: zsh/.zshrc.zgen
 
-    # Zsh Custom Configuration
-    ~/.zshrc.local: zsh/.zshrc.local
+    ########################################
+    # Local Configuration
+    ########################################
 
-    # Oh My Zsh Themes
-    # ~/.oh-my-zsh/themes/mildronize.zsh-theme: oh-my-zsh/themes/mildronize.zsh-theme
+    ~/.zshrc.local: zsh/.zshrc.local
+    ~/.vimrc.local: vim/.vimrc.local
+    ~/.vimrc.keys.local: vim/.vimrc.keys.local
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

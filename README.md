@@ -84,6 +84,10 @@ dotup
 - Support on Linux and Windows
 - <https://github.com/powerline/fonts>
 
+## Problem
+- **Q**: `zsh` isn't set to default shell
+- **A**: `chsh -s /usr/bin/zsh [username]` (Don't use `sudo`)
+
 [Vim Plug]: https://github.com/junegunn/vim-plug.git
 
 ## Managing your custom configurations
