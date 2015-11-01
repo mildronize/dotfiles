@@ -23,6 +23,8 @@
     ~/.vimrc.local: vim/.vimrc.local
     ~/.vimrc.keys.local: vim/.vimrc.keys.local
 
+    ~/.zgen/robbyrussell/oh-my-zsh-master/themes/gitster.zsh-theme: oh-my-zsh/themes/gitster.zsh-theme
+
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     # - [tmux source-file ~/.tmux.conf, Reloading TMUX configuration (Run in TMUX only)]
