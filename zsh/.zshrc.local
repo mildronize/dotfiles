@@ -43,3 +43,6 @@ function cpfind {
 
 # Run tmux when start computer
 tmux attach > /dev/null 2>&1 || tmux new > /dev/null 2>&1
+
+# Tmux help
+alias tmuxh="less $HOME/.dotfiles/tmux/help.txt"

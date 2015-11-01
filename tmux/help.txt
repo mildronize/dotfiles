@@ -1,0 +1,34 @@
+# TMUX in Shell
+Start new                   | tmux
+Start new with session name | tmux new -s [session_name]
+Attach session              | tmux a #  (or at, or attach)
+Attach to named             | tmux a -t [session_name]
+List sessions               | tmux ls
+kill session                | tmux kill-session -t [session_name]
+
+# TMUX in Hot Key
+Hit prefix `Ctrl+b` and then
+
+## Windows (tabs)
+New window   | c
+Name window  | ,
+List windows | w
+Find window  | f
+Kill window  | &
+Move window  | . | prompted for a new number
+
+## Panes (splits)
+horizontal split  | %
+vertical split    | "
+swap panes        | o
+show pane numbers | q
+kill pane         | x
+
+## Misc
+detach         | d
+big clock      | t
+list shortcuts | ?
+prompt         | :
+
+# Ref
+https://gist.github.com/henrik/1967800
