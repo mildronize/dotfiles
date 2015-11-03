@@ -28,6 +28,7 @@ Plug 'christoomey/vim-system-copy'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
+Plug 'tmux-plugins/vim-tmux-focus-events' " Make terminal vim and tmux work better together.
 
 Plug 'kien/ctrlp.vim'
                                        " Git
