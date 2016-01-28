@@ -1,3 +1,4 @@
+Modify from https://gist.github.com/MohamedAlaa/2961058
 # TMUX in Shell
 Start new                   | tmux
 Start new with session name | tmux new -s [session_name]
@@ -23,6 +24,15 @@ vertical split    | "
 swap panes        | o
 show pane numbers | q
 kill pane         | x
+toggle pane zoom  | z
+------------------------
+### More
++  break pane into window (e.g. to select text by mouse to copy)
+-  restore pane from window
+⍽  space - toggle between layouts
+q (Show pane numbers, when the numbers show up type the key to goto that pane)
+{ (Move the current pane left)
+} (Move the current pane right)
 
 ## Misc
 detach         | d
