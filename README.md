@@ -1,6 +1,9 @@
 # dotfiles
 A dotfiles boilerplate that anyone can fork it to save own configuration and ready to use. It contains [Vim](http://www.vim.org), [Zsh](http://www.zsh.org) with [Oh-my-zsh] and [Tmux](https://tmux.github.io/) configurations.
 
+## Warning!
+This `dotfiles` supports only no config of vim, tmux and zsh. In the other hand, you should to **backup your current configurations** of each program.
+
 **Features**
 - To reduce tightly coupled in each tool from [my previous version](https://github.com/mildronize/dotfiles-legacy) (forked from [ibotdotout](https://github.com/ibotdotout/dotfiles))
 - To use [Dotbot](https://github.com/anishathalye/dotbot/) to create symbolink to my home automatically
