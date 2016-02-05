@@ -48,5 +48,6 @@ function cpfind {
 alias tmuxh="less $HOME/.dotfiles/tmux/help.txt"
 
 # Run Jekyll with Docker
-alias jekyll='sudo docker run --rm -v "$PWD:/src" -p 4000:4000 myblog jekyll'
+alias jekyll='sudo docker run --rm -v "$PWD:/src" -p 4000:4000 mildronize/mildronize.github.io jekyll'
 
+alias jekyll-live='live-server --port=4000 _site/'
