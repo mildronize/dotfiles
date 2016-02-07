@@ -47,7 +47,13 @@ function cpfind {
 # Tmux help
 alias tmuxh="less $HOME/.dotfiles/tmux/help.txt"
 
+# NVM
+export NVM_DIR="/home/mildronize/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Jekyll
 # Run Jekyll with Docker
 alias jekyll='sudo docker run --rm -v "$PWD:/src" -p 4000:4000 mildronize/mildronize.github.io jekyll'
-
-alias jekyll-live='live-server --port=4000 _site/'
+alias jekyll-auto-build='sudo docker run --rm -v "$PWD:/src" mildronize/mildronize.github.io jekyll build --watch'
+# Live Reload by live-server (nodejs, nvm )
+alias jekyll-live='nvm exec 0.10 live-server --port=4000 _site/'
