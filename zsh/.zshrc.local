@@ -1,7 +1,7 @@
 # My local PATH
 export PATH=$HOME/Programs/zotero:$PATH
 export PATH=$HOME/Programs/aard2:$PATH
-
+export EDITOR=vim
 # short pdflatex with output in folder
 # alias pdflatex="pdflatex -output-directory=output"
 
@@ -54,6 +54,16 @@ export NVM_DIR="/home/mildronize/.nvm"
 # Jekyll
 # Run Jekyll with Docker
 alias jekyll='sudo docker run --rm -v "$PWD:/src" -p 4000:4000 mildronize/mildronize.github.io jekyll'
+alias jekyll-serve='jekyll serve --host 0.0.0.0'
 alias jekyll-auto-build='sudo docker run --rm -v "$PWD:/src" mildronize/mildronize.github.io jekyll build --watch'
 # Live Reload by live-server (nodejs, nvm )
 alias jekyll-live='nvm exec 0.10 live-server --port=4000 _site/'
+
+# Cheat
+export DEFAULT_CHEAT_DIR=$HOME/.dotfiles/cheat
+export CHEATCOLORS=true
+
+_cmpl_cheat() {
+	reply=($(cheat -l | cut -d' ' -f1))
+}
+compctl -K _cmpl_cheat cheat

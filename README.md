@@ -87,6 +87,10 @@ dotup
 - Support on Linux and Windows
 - <https://github.com/powerline/fonts>
 
+## Install Cheat
+[Interactive cheatsheets on the command-line](https://github.com/chrisallenlane/cheat)
+- `sudo easy_install cheat`
+
 ## Problem
 - **Q**: `zsh` isn't set to default shell
 - **A**: `chsh -s /usr/bin/zsh [username]` (Don't use `sudo`)

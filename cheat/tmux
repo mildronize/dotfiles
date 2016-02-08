@@ -25,6 +25,7 @@ Switch between windows | [0-9]
 ## Panes (splits)
 horizontal split  | %
 vertical split    | "
+"Page up/down     | page-up/down
 swap panes        | o
 show pane numbers | q
 kill pane         | x
