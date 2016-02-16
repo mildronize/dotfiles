@@ -1,0 +1,2 @@
+# Copy multiple files from one directory to another
+cp /source/path/{file1,file2} /destination/path
