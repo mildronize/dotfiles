@@ -50,6 +50,10 @@ alias tmuxh="less $HOME/.dotfiles/tmux/help.txt"
 # NVM
 export NVM_DIR="/home/mildronize/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+# Markdown preview by https://github.com/suan/vim-instant-markdown
+# nvm exec 0.10 npm install -g instant-markdown-d
 
 # Jekyll
 # Run Jekyll with Docker
