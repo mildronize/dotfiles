@@ -35,7 +35,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'              " Easy to use git tools
 Plug 'airblade/vim-gitgutter'          " Intregrate git into Vim for showing the changes
 
-
+Plug 'suan/vim-instant-markdown' " Markdown Preview
                                        " Personal Use
 " Plug 'chakrit/vim-thai-keys'           " Allow use Thai char to control Vim
 Plug 'xolox/vim-colorscheme-switcher'  " Press <F8> to change vim color scheme
@@ -55,4 +55,3 @@ endif
 if filereadable(expand("~/.vimrc.local"))
 	source ~/.vimrc.local
 endif
-
