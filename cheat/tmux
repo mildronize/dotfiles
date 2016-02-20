@@ -6,6 +6,7 @@ Attach to named             | tmux a -t [session_name]
 List sessions               | tmux ls
 kill session                | tmux kill-session -t [session_name]
 ### More
+rename session              | <Prefix> + $
 # Start a shared session:
 tmux -S /tmp/your_shared_session
 chmod 777 /tmp/your_shared_session
