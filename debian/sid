@@ -1,0 +1,6 @@
+deb http://ftp.th.debian.org/debian/ sid main contrib non-free
+deb-src http://ftp.th.debian.org/debian/ sid main contrib non-free
+
+deb http://ftp.th.debian.org/debian/ stable main contrib non-free
+deb http://ftp.th.debian.org/debian/ testing main contrib non-free
+deb http://ftp.th.debian.org/debian/ experimental main contrib non-free
