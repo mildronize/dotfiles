@@ -55,11 +55,6 @@ export NVM_DIR="/home/mildronize/.nvm"
 # Markdown preview by https://github.com/suan/vim-instant-markdown
 # nvm exec 0.10 npm install -g instant-markdown-d
 
-# Jekyll
-# Run Jekyll with Docker
-alias jekyll='sudo docker run --rm -v "$PWD:/src" -p 4000:4000 mildronize/mildronize.github.io jekyll'
-alias jekyll-serve='jekyll serve --host 0.0.0.0'
-alias jekyll-auto-build='sudo docker run --rm -v "$PWD:/src" mildronize/mildronize.github.io jekyll build --watch'
 # Live Reload by live-server (nodejs, nvm )
 alias jekyll-live='nvm exec 0.10 live-server --port=4000 _site/'
 
@@ -71,3 +66,9 @@ _cmpl_cheat() {
 	reply=($(cheat -l | cut -d' ' -f1))
 }
 compctl -K _cmpl_cheat cheat
+
+# Docker
+
+function docker-bash {
+    docker exec -it $1 /bin/bash
+}
