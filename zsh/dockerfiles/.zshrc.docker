@@ -1,0 +1,4 @@
+function docker-live-server {
+# port $1
+    docker run -it --rm --expose $1 -p $1:$1 -v "$PWD:/www" mildronize/dockerfiles:node-live-server live-server --port=$1
+}

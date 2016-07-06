@@ -16,3 +16,6 @@ if [[ -f "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
 fi
 
+if [[ -f "$HOME/.dotfiles/zsh/dockerfiles/.zshrc.docker" ]]; then
+  source "$HOME/.dotfiles/zsh/dockerfiles/.zshrc.docker"
+fi
