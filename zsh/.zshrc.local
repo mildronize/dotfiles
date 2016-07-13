@@ -72,3 +72,16 @@ compctl -K _cmpl_cheat cheat
 function docker-bash {
     docker exec -it $1 /bin/bash
 }
+
+function login-psu {
+    user=5810120061
+    echo "login to PSU with $user"
+    echo "Password: "
+    read -s password
+    response="$(http --form POST https://cp-xml.psu.ac.th/auth.php username=$user password=$password login=Login)"
+    if [[ $response == *"Login failed"* ]]; then
+        echo "Login Failed";
+    else
+        echo "Login Successfully";
+    fi
+}
