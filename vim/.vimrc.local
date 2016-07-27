@@ -1,1 +1,1 @@
-colorscheme bclear
+silent! colorscheme bclear
