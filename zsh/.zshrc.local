@@ -27,36 +27,18 @@ alias grep="grep --color=always"
 # ack option
 alias ack="ack --color"
 
-# http://stackoverflow.com/a/23389099
-# hightlight color with grep
-function greph {
-    grep -E "$1|$" $2
-}
 
 # kill process with pid
 alias killp="kill -KILL"
 
-# http://stackoverflow.com/a/18339127
-function cpfind {
-    find . -name "$1" -type f -exec cp {} $2 \;
-}
 
 # Run tmux when start computer
 # tmux attach > /dev/null 2>&1 || tmux new > /dev/null 2>&1
-
-# Tmux help
-alias tmuxh="less $HOME/.dotfiles/tmux/help.txt"
 
 # NVM
 export NVM_DIR="/home/mildronize/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-
-# Markdown preview by https://github.com/suan/vim-instant-markdown
-# nvm exec 0.10 npm install -g instant-markdown-d
-
-# Live Reload by live-server (nodejs, nvm )
-alias jekyll-live='nvm exec 0.10 live-server --port=4000 _site/'
 
 # Cheat
 export DEFAULT_CHEAT_DIR=$HOME/.dotfiles/cheat
@@ -67,27 +49,15 @@ _cmpl_cheat() {
 }
 compctl -K _cmpl_cheat cheat
 
+# Pretty Print
+alias pretty-json='python -m json.tool | pygmentize -l javascript'
+function syntax-highlighter {
+   pygmentize -l $1
+}
+
 # Docker
 
 function docker-bash {
     docker exec -it $1 /bin/bash
 }
 
-function login-psu {
-    # Define Color
-    RED='\033[0;31m'
-    GREEN='\033[0;32m'
-    NC='\033[0m' # No Color
-    # checking required package
-    hash http 2>/dev/null || { echo >&2 "${RED}httpie isn't installed.  Aborting.${NC}"; return 1; }
-
-    user=5810120061
-    echo "login to PSU with $user, Enter Password: "
-    read -s password
-    response="$(http --form POST https://cp-xml.psu.ac.th/auth.php username=$user password=$password login=Login)"
-    if [[ $response == *"Login failed"* ]]; then
-        echo "${RED}Login Failed${NC}";
-    else
-        echo "${GREEN}Login Successfully${NC}";
-    fi
-}
