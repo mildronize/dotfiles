@@ -1,4 +1,6 @@
-.PHONY: vim-all vim tmux-all tmux zsh-all zsh etc
+.PHONY: vim-all vim vim-clean tmux-all tmux zsh-all zsh etc
+
+current_dir = $(shell pwd)
 
 all: vim-all tmux-all zsh-all etc
 
@@ -8,9 +10,14 @@ zsh-all: zsh zsh-rest
 
 vim:
 	@echo install vim
+	ln -sf $(current_dir)/vim/.vimrc $(HOME)/.vimrc
 
 vim-rest:
 	@echo install vim-rest
+	ln -sf $(current_dir)/vim/.vimrc.plug $(HOME)/.vimrc.plug
+
+vim-clean:
+	rm -f $(HOME)/.vimrc*
 
 tmux:
 	@echo install tmux
