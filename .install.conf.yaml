@@ -20,6 +20,7 @@
     ########################################
 
     ~/.zshrc.local: zsh/.zshrc.local
+    ~/.functions: scripts/.functions
     ~/.vimrc.local: vim/.vimrc.local
     ~/.vimrc.keys.local: vim/.vimrc.keys.local
 

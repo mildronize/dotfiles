@@ -14,8 +14,16 @@ fi
 # Customize to your needs...
 if [[ -f "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
+
+fi
+
+if [[ -f "$HOME/.functions" ]]; then
+  source "$HOME/.functions"
 fi
 
 if [[ -f "$HOME/.dotfiles/zsh/dockerfiles/.zshrc.docker" ]]; then
   source "$HOME/.dotfiles/zsh/dockerfiles/.zshrc.docker"
 fi
+
+export NVM_DIR="/home/mildronize/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

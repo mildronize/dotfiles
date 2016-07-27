@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# COLORS
+# http://unix.stackexchange.com/questions/148/colorizing-your-terminal-and-shell-environment
+export COLOR_NC='\e[0m' # No Color
+export COLOR_WHITE='\e[1;37m'
+export COLOR_BLACK='\e[0;30m'
+export COLOR_BLUE='\e[0;34m'
+export COLOR_LIGHT_BLUE='\e[1;34m'
+export COLOR_GREEN='\e[0;32m'
+export COLOR_LIGHT_GREEN='\e[1;32m'
+export COLOR_CYAN='\e[0;36m'
+export COLOR_LIGHT_CYAN='\e[1;36m'
+export COLOR_RED='\e[0;31m'
+export COLOR_LIGHT_RED='\e[1;31m'
+export COLOR_PURPLE='\e[0;35m'
+export COLOR_LIGHT_PURPLE='\e[1;35m'
+export COLOR_BROWN='\e[0;33m'
+export COLOR_YELLOW='\e[1;33m'
+export COLOR_GRAY='\e[0;30m'
+export COLOR_LIGHT_GRAY='\e[0;37m'
+
+# https://github.com/jfrazelle/dotfiles/blob/master/.functions#L252
+# Get colors in manual pages
+man() {
+	env \
+		LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+		LESS_TERMCAP_md=$(printf "\e[1;31m") \
+		LESS_TERMCAP_me=$(printf "\e[0m") \
+		LESS_TERMCAP_se=$(printf "\e[0m") \
+		LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+		LESS_TERMCAP_ue=$(printf "\e[0m") \
+		LESS_TERMCAP_us=$(printf "\e[1;32m") \
+		man "$@"
+}
+
+# http://stackoverflow.com/a/23389099
+# hightlight color with grep
+function greph {
+    grep -E "$1|$" $2
+}
+
+# http://stackoverflow.com/a/18339127
+function cpfind {
+    find . -name "$1" -type f -exec cp {} $2 \;
+}
+
+function login-psu {
+    # Define Color
+    RED='\033[0;31m'
+    GREEN='\033[0;32m'
+    NC='\033[0m' # No Color
+    # checking required package
+    hash http 2>/dev/null || { echo >&2 "${RED}httpie isn't installed.  Aborting.${NC}"; return 1; }
+
+    user=5810120061
+    echo "login to PSU with $user, Enter Password: "
+    read -s password
+    response="$(http --form POST https://cp-xml.psu.ac.th/auth.php username=$user password=$password login=Login)"
+    if [[ $response == *"Login failed"* ]]; then
+        echo "${RED}Login Failed${NC}";
+    else
+        echo "${GREEN}Login Successfully${NC}";
+    fi
+}
+function get_current_timestamp_milliseconds {
+    echo $(($(date +%s%N)/1000000))
+}
+
+function counter {
+    echo "Start Time -> $(date  '+%F %T') ($(get_current_timestamp_milliseconds))"
+    START=$(get_current_timestamp_milliseconds)
+    bash -c "$1"
+    END=$(get_current_timestamp_milliseconds)
+    DIFF=$(( $END - $START ))
+    DIFFMILLI=$(bc <<< "scale=3;$DIFF/1000")
+    echo "'$1' takes ${COLOR_BLUE}$DIFFMILLI seconds${COLOR_NC}"
+}
