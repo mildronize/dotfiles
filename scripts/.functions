@@ -70,9 +70,9 @@ function get_current_timestamp_milliseconds {
 function counter {
     echo "Start Time -> $(date  '+%F %T') ($(get_current_timestamp_milliseconds))"
     START=$(get_current_timestamp_milliseconds)
-    bash -c "$1"
+    echo $@ | bash
     END=$(get_current_timestamp_milliseconds)
     DIFF=$(( $END - $START ))
     DIFFMILLI=$(bc <<< "scale=3;$DIFF/1000")
-    echo "'$1' takes ${COLOR_BLUE}$DIFFMILLI seconds${COLOR_NC}"
+    echo "'$@' takes ${COLOR_BLUE}$DIFFMILLI seconds${COLOR_NC}"
 }

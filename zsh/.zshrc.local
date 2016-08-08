@@ -51,7 +51,7 @@ compctl -K _cmpl_cheat cheat
 
 # Pretty Print
 alias pretty-json='python -m json.tool | pygmentize -l javascript'
-function syntax-highlighter {
+function code-color {
    pygmentize -l $1
 }
 
