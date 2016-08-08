@@ -6,8 +6,6 @@ function check_prerequisite {
     hash $1 2>/dev/null || { echo >&2 "$1 isn't installed.  Aborting."; exit 1; }
 }
 
-check_prerequisite git
-check_prerequisite curl
 
 target_path="$HOME/.dotfiles"
 vimplug_path="$HOME/.vim/autoload/plug.vim"        # Vim Plug path
