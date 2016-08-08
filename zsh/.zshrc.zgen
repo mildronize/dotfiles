@@ -10,7 +10,6 @@ if ! zgen saved; then
     # plugins
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/sudo
-    zgen oh-my-zsh plugins/rvm
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/python
     zgen oh-my-zsh plugins/debian
@@ -46,7 +45,7 @@ if ! zgen saved; then
 fi
 
 #run reset Zgen bootstrap & reload source ~/.zshrc
-alias rezsh="rm -f $HOME/.zgen/init.zsh && source ~/.zshrc"
+alias rezsh="rm -f ${ZGEN_INIT} && source ~/.zshrc"
 
 # Update config
 alias dotup="$HOME/.dotfiles/update && zgen update && rezsh"

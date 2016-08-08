@@ -1,4 +1,4 @@
-.PHONY: al-curlvim-all vim vim-only vim-clean tmux-all tmux zsh-all zsh etc
+.PHONY: all vim-all vim vim-only vim-clean tmux zsh etc
 .DEFAULT_GOAL := help
 
 define PRINT_HELP_PYSCRIPT
@@ -19,6 +19,7 @@ tmux_plugin_manager_path = $(shell source $(current_dir)/configs.sh; echo "$$tmu
 # plugin_vimrc_path = "$(current_dir)/vim/plugins"
 vim_plugin_path = "$(HOME)/.vim"
 dotfiles_backup_path = "$(HOME)/.dotfiles-backup"
+# zgen_init_path = "$(HOME)"/.zgen/init.zsh
 
 test:
 	echo $(test_var)
@@ -32,7 +33,7 @@ backup:
 	cp .zshrc* $(dotfiles_backup_path)
 	cp .tmux.conf* $(dotfiles_backup_path)
 
-all: vim-all tmux-all zsh-all etc ## Install all (vim, tmux, zsh and their configs)
+all: vim-all tmux zsh etc ## Install all (vim, tmux, zsh and their configs)
 
 vim-all: vim-only vim-install-vimplug ## Install .vimrc, local .vimrc and all plugins
 	@echo install vim-rest
@@ -43,7 +44,7 @@ vim-all: vim-only vim-install-vimplug ## Install .vimrc, local .vimrc and all pl
 	$(MAKE) vim-install-plugins
 
 tmux-all: tmux tmux-rest ## Install .tmuxconf and all Tmux Plugins
-zsh-all: zsh zsh-rest ## Install oh-my-zsh and their configs
+# zsh-all: zsh zsh-rest ## Install oh-my-zsh and their configs
 
 ### START VIM SECTION
 
@@ -64,24 +65,34 @@ vim-clean: ## Clean all vimrc and their plugins
 
 ### END VIM SECTION
 
-tmux:
+tmux: ## Install .tmux.conf
 	@echo install tmux
 	$(current_dir)/init_tmux.sh
 	ln -sf $(current_dir)/tmux/.tmux.conf $(HOME)
+	tmux source ~/.tmux.conf
 
-tmux-clean:
+tmux-clean: ## Clean Tmux
 	rm -rIv $(HOME)/.tmux.conf* $(tmux_plugin_manager_path)
 
-zsh:
+zsh: ## Install .zshrcs
 	@echo install zsh
 	ln -sf $(current_dir)/zsh/.zshrc $(HOME)
-
-zsh-rest:
-	@echo install zsh-rest
+	ln -sf $(current_dir)/zsh/.zshrc.zgen $(HOME)
 	ln -sf $(current_dir)/zsh/.zshrc.local $(HOME)
+	zsh
+	# $(MAKE) zsh-reload-rc
 
-zsh-clean:
-	rm -rfv $(HOME)/.zshrc* $(HOME)/.vim
+# zsh-all: zsh
+	# @echo install zsh-rest
+	# zsh
+	# $(MAKE) zsh-reload-rc
+
+# zsh-reload-rc:
+	# rm -f $(zgen_init_path)
+	# source $(HOME)/.zshrc
+
+zsh-clean: ## Clean zsh
+	rm -rfv $(HOME)/.zshrc* $(HOME)/.zgen
 
 etc:
 	@echo install etc
