@@ -12,12 +12,25 @@ for line in sys.stdin:
 endef
 export PRINT_HELP_PYSCRIPT
 
+SHELL:=/bin/bash
+
 current_dir = $(shell pwd)
+tmux_plugin_manager_path = $(shell source $(current_dir)/configs.sh; echo "$$tmux_plugin_manager_path")
 # plugin_vimrc_path = "$(current_dir)/vim/plugins"
 vim_plugin_path = "$(HOME)/.vim"
+dotfiles_backup_path = "$(HOME)/.dotfiles-backup"
+
+test:
+	echo $(test_var)
 
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
+
+backup:
+	mkdir -p $(dotfiles_backup_path)
+	cp .vimrc* $(dotfiles_backup_path)
+	cp .zshrc* $(dotfiles_backup_path)
+	cp .tmux.conf* $(dotfiles_backup_path)
 
 all: vim-all tmux-all zsh-all etc ## Install all (vim, tmux, zsh and their configs)
 
@@ -47,15 +60,17 @@ vim-install-vimplug:
 	$(current_dir)/init_vim.sh
 
 vim-clean: ## Clean all vimrc and their plugins
-	rm -rfv $(HOME)/.vimrc* $(HOME)/.vim
+	rm -rIv $(HOME)/.vimrc* $(HOME)/.vim
 
 ### END VIM SECTION
 
 tmux:
 	@echo install tmux
+	$(current_dir)/init_tmux.sh
+	ln -sf $(current_dir)/tmux/.tmux.conf $(HOME)
 
-tmux-rest:
-	@echo install tmux-rest
+tmux-clean:
+	rm -rIv $(HOME)/.tmux.conf* $(tmux_plugin_manager_path)
 
 zsh:
 	@echo install zsh
