@@ -21,29 +21,35 @@ help:
 
 all: vim-all tmux-all zsh-all etc ## Install all (vim, tmux, zsh and their configs)
 
-vim-all: vim vim-rest
-tmux-all: tmux tmux-rest
-zsh-all: zsh zsh-rest
-
-vim: vim-only
-	$(current_dir)/init_vim.sh
-	vim +PlugInstall +qall # Install plugins by Vim Plug
-
-vim-only:
-	@echo install vim
-	ln -sf $(current_dir)/vim/.vimrc $(HOME)
-
-vim-rest:
+vim-all: vim-only vim-install-vimplug ## Install .vimrc, local .vimrc and all plugins
 	@echo install vim-rest
-	$(current_dir)/init_vim.sh
 	mkdir -p $(vim_plugin_path)
 	ln -sf $(current_dir)/vim/.vimrc.plug.local $(HOME)
 	ln -sf $(current_dir)/vim/.vimrc.keys.local $(HOME)
 	ln -sf $(current_dir)/vim/.vimrc.local $(HOME)
+	$(MAKE) vim-install-plugins
+
+tmux-all: tmux tmux-rest ## Install .tmuxconf and all Tmux Plugins
+zsh-all: zsh zsh-rest ## Install oh-my-zsh and their configs
+
+### START VIM SECTION
+
+vim: vim-only vim-install-vimplug vim-install-plugins ## Install .vimrc with some useful plugins
+
+vim-only: ## Install only .vimrc
+	@echo install vim
+	ln -sf $(current_dir)/vim/.vimrc $(HOME)
+
+vim-install-plugins:
 	vim +PlugInstall +qall # Install plugins by Vim Plug
 
-vim-clean:
+vim-install-vimplug:
+	$(current_dir)/init_vim.sh
+
+vim-clean: ## Clean all vimrc and their plugins
 	rm -rfv $(HOME)/.vimrc* $(HOME)/.vim
+
+### END VIM SECTION
 
 tmux:
 	@echo install tmux
