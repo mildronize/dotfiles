@@ -43,7 +43,7 @@ vim-all: vim-only vim-install-vimplug ## Install .vimrc, local .vimrc and all pl
 	ln -sf $(current_dir)/vim/.vimrc.local $(HOME)
 	$(MAKE) vim-install-plugins
 
-tmux-all: tmux tmux-rest ## Install .tmuxconf and all Tmux Plugins
+# tmux-all: tmux tmux-rest ## Install .tmuxconf and all Tmux Plugins
 # zsh-all: zsh zsh-rest ## Install oh-my-zsh and their configs
 
 ### START VIM SECTION
