@@ -1,4 +1,4 @@
-.PHONY: all vim-all vim vim-only vim-clean tmux zsh etc
+.PHONY: all vim-all vim vim-only vim-clean tmux zsh etc babun
 .DEFAULT_GOAL := help
 
 define PRINT_HELP_PYSCRIPT
@@ -93,6 +93,9 @@ zsh: ## Install .zshrcs
 
 zsh-clean: ## Clean zsh
 	rm -rfv $(HOME)/.zshrc* $(HOME)/.zgen
+
+babun: ## Install babunrc and their rcs.
+	ln -sf $(current_dir)/babun/.minttyrc $(HOME)
 
 etc:
 	@echo install etc
