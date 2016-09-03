@@ -2,6 +2,15 @@
 export PATH=$HOME/Programs/zotero:$PATH
 export PATH=$HOME/Programs/aard2:$PATH
 export EDITOR=vim
+
+if [[ -f "$HOME/.dotfiles/scripts/.functions" ]]; then
+  source "$HOME/.dotfiles/scripts/.functions"
+fi
+
+if [[ -f "$HOME/.dotfiles/scripts/dockerfiles/.bashrc.docker" ]]; then
+  source "$HOME/.dotfiles/scripts/dockerfiles/.bashrc.docker"
+fi
+
 # short pdflatex with output in folder
 # alias pdflatex="pdflatex -output-directory=output"
 
