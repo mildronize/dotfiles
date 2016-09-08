@@ -11,6 +11,10 @@ This `dotfiles` supports only no config of vim, tmux and zsh. In the other hand,
 The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 - Use [Zgen](https://github.com/tarjoilija/zgen) to manage [Oh-my-zsh] and zsh plugins
 
+## Todo
+- [ ] Change Zgen to [ZPlug](https://github.com/zplug/zplug)
+
+
 ### How to use my dotfiles
 1. Fork this repository
 2. Commit your own configurations
