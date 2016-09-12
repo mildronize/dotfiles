@@ -35,7 +35,7 @@ if ! zgen saved; then
         # zgen oh-my-zsh themes/dst
         zgen oh-my-zsh themes/eastwood
     else
-        zgen oh-my-zsh themes/agnoster
+        zgen oh-my-zsh themes/robbyrussell
         # zgen oh-my-zsh themes/gitster
         # ZSH_THEME=gitster
     fi
