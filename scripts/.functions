@@ -76,3 +76,5 @@ function counter {
     DIFFMILLI=$(bc <<< "scale=3;$DIFF/1000")
     echo "'$@' takes ${COLOR_BLUE}$DIFFMILLI seconds${COLOR_NC}"
 }
+
+alias 2clip="xclip -sel clip"
