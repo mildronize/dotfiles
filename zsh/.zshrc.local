@@ -1,6 +1,5 @@
 # My local PATH
-export PATH=$HOME/Programs/zotero:$PATH
-export PATH=$HOME/Programs/aard2:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export EDITOR=vim
 
 if [[ -f "$HOME/.dotfiles/scripts/.functions" ]]; then
