@@ -61,6 +61,9 @@ au FileType liquid set spell spelllang=en_us
 " set PEP8
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
+" For yml/xml, 2 spaces
+au BufRead,BufNewFile *.yml,*xml  set softtabstop=2 tabstop=2 shiftwidth=2
+
 " run autoPEP8
 " set autoread
 " au BufWritePost *.py silent call AutoPEP8()
