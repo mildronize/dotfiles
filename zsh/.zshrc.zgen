@@ -28,12 +28,12 @@ if ! zgen saved; then
 
     # theme
 
-    if [ "$PUTTY" = "true" ]
+    if [ "$DOTFILES_REMOTE" = "true" ]
     then
         # If it is remoted from windows
         # zgen oh-my-zsh themes/blinks
         # zgen oh-my-zsh themes/dst
-        zgen oh-my-zsh themes/eastwood
+        zgen oh-my-zsh themes/kafeitu
     else
         zgen oh-my-zsh themes/robbyrussell
         # zgen oh-my-zsh themes/gitster
