@@ -7,7 +7,7 @@ export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-git submodule update --init --recursive
+bash -c "cd $HOME/.dotfiles && git submodule update --init --recursive"
 
 # Load Zgen ( zsh plugin manager )
 if [[ -f "$HOME/.zshrc.zgen" ]]; then
