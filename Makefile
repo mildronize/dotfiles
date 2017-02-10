@@ -80,7 +80,6 @@ zsh: ## Install .zshrcs
 	ln -sf $(current_dir)/zsh/.zshrc.zgen $(HOME)
 	ln -sf $(current_dir)/zsh/.zshrc.local $(HOME)
 	git submodule update --init --recursive
-	zsh
 	# $(MAKE) zsh-reload-rc
 
 # zsh-all: zsh
