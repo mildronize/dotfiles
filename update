@@ -33,3 +33,4 @@ fi
     { echo "Installing vim plugin"; vim +PlugInstall +qall; } && \
     echo "All done!"
 
+bash -c "cd $HOME/.dotfiles && git submodule update --recursive --remote"

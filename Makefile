@@ -79,7 +79,7 @@ zsh: ## Install .zshrcs
 	ln -sf $(current_dir)/zsh/.zshrc $(HOME)
 	ln -sf $(current_dir)/zsh/.zshrc.zgen $(HOME)
 	ln -sf $(current_dir)/zsh/.zshrc.local $(HOME)
-	# git submodule update --init --recursive
+	git submodule update --init --recursive
 	# $(MAKE) zsh-reload-rc
 
 # zsh-all: zsh
