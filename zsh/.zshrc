@@ -1,6 +1,8 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+# Add For MAC
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
 #add local bin pah
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
@@ -19,7 +21,6 @@ if [[ -f "$HOME/.zshrc.local" ]]; then
   source "$HOME/.zshrc.local"
 
 fi
-
 
 # export NVM_DIR="/home/mildronize/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

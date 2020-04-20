@@ -96,3 +96,30 @@ function docker-bash {
     docker exec -it $1 /bin/bash
 }
 
+# --------------------------------------------------------
+#
+# For Mac OS
+#
+# --------------------------------------------------------
+
+export PATH=$PATH:/Library/TeX/texbin
+export PATH=$PATH:/usr/local/share/dotnet
+
+export PATH=$PATH:$HOME/Software/flutter/bin
+export PATH=$PATH:$HOME/Software/dart-sdk/bin
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# dotnet config
+export PATH="$PATH:$HOME/.dotnet/tools"
+
+
+alias obs='/Applications/OBS.app/Contents/MacOS/OBS'
+function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+
+# for mac
+# https://gist.github.com/BretFisher/6f688dde0122399efdca5a9d26100437
+# then add alias to your ~/.bash_profile or ~/.bashrc or ~/.zshrc etc.
+alias pcat='pygmentize -f terminal256 -O style=native -g'
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
