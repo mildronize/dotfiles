@@ -50,30 +50,23 @@ The previous version uses [Janus Vim](https://github.com/carlhuda/janus)
 
 ## Quick setup
 ### Installation
-- Make sure you installed `git curl zsh tmux vim`
-- Clone this repo or your folk repo. Ex.
-```
-git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles && ~/.dotfiles/install
-```
-### Update All
-Update all dotfiles links, Reinstall zsh plugin & Resource `.zshrc`, Reinstall vim plugin
+- Make sure you installed `git curl zsh tmux vim`, then run the command:
 
 ```
-dotup
+git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && make all
 ```
+
+For tmux config, it requires to run `make tmux` inside tmux session.
 
 ## Manual
 ### Installation
 - Make sure you installed `git curl zsh tmux vim`
 - `git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles`
 - `cd ~/.dotfiles`
-- `./init` for installing [Vim Plug] that it can manage many vim plugins
-- `./dotbot`
+- `make vim-all` for installing [Vim Plug] that it can manage many vim plugins
+- `make zsh` for installing [Vim Plug] that it can manage many vim plugins
+- `make tmux` for installing tmux config, note run this command inside tmux session.
 - Run `zsh` to run zsh and install their plugins oh-my-zsh
-- Run `vim +PlugInstall +qall` or run `vim`, then installing plugin by `:PlugInstall`
-
-### Update Dotfiles
-- `./dotbot`
 
 ### Update zsh config
 - `rezsh` or `zgen reset && source ~/.zshrc`
