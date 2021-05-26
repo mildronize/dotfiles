@@ -64,7 +64,7 @@ For tmux config, it requires to run `make tmux` inside tmux session.
 - `git clone https://github.com/mildronize/dotfiles.git ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `make vim-all` for installing [Vim Plug] that it can manage many vim plugins
-- `make zsh` for installing [Vim Plug] that it can manage many vim plugins
+- `make zsh` for installing zsh config 
 - `make tmux` for installing tmux config, note run this command inside tmux session.
 - Run `zsh` to run zsh and install their plugins oh-my-zsh
 
