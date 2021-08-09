@@ -69,11 +69,9 @@ alias killp="kill -KILL"
 # tmux attach > /dev/null 2>&1 || tmux new > /dev/null 2>&1
 
 # NVM
-export NVM_DIR="/home/mildronize/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Cheat
 export DEFAULT_CHEAT_DIR=$HOME/.dotfiles/cheat
@@ -123,3 +121,9 @@ function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*
 alias pcat='pygmentize -f terminal256 -O style=native -g'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+function syncUpstream {
+    git checkout $1 && git fetch upstream && git merge upstream/$1
+} 
+
+
