@@ -113,8 +113,6 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 
 
 alias obs='/Applications/OBS.app/Contents/MacOS/OBS'
-function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
-
 
 # for mac
 # https://gist.github.com/BretFisher/6f688dde0122399efdca5a9d26100437
@@ -146,3 +144,9 @@ alias dotnet6='$HOME/dotnet/dotnet'
 
 ## Gits-sizer
 export PATH=$PATH:$HOME/git-sizer
+
+## WSL2
+
+# Open VS code from WSL
+alias code='/mnt/c/Users/mildronize/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
+
