@@ -44,8 +44,27 @@ if ! zgen saved; then
     zgen save
 fi
 
+## ZSH Utitliy
+
+export DOTFILES_LOG=/tmp/mildronize-dotfiles.log
+alias zshlog="tail -f $DOTFILES_LOG "
+
+# Use this function when run some script on start up, when hide log from stdout
+function _zsh_startup {
+  echo "-----------------------------------------------------------------" >> $DOTFILES_LOG
+  date >> $DOTFILES_LOG
+  $@ >> $DOTFILES_LOG
+}
+
 #run reset Zgen bootstrap & reload source ~/.zshrc
-alias rezsh="rm -f ${ZGEN_INIT} && source ~/.zshrc"
+# alias rezsh="rm -f ${ZGEN_INIT} && source ~/.zshrc"
+function rezsh {
+  echo "-----------------------------------------------------------------" >> $DOTFILES_LOG
+  echo "Reloading ZSH config" >> $DOTFILES_LOG
+  date >> $DOTFILES_LOG
+  rm -f ${ZGEN_INIT}
+  source ~/.zshrc >> $DOTFILES_LOG
+}
 
 # Update config
 alias dotup="$HOME/.dotfiles/update && zgen update && rezsh"
