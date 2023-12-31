@@ -1,4 +1,7 @@
+
+
 # My local PATH
+
 export PATH=$HOME/.local/bin:$PATH
 export EDITOR=vim
 
@@ -6,9 +9,9 @@ if [[ -f "$HOME/.dotfiles/scripts/.functions" ]]; then
   source "$HOME/.dotfiles/scripts/.functions"
 fi
 
-if [[ -f "$HOME/.dotfiles/scripts/dockerfiles/.bashrc.docker" ]]; then
-  source "$HOME/.dotfiles/scripts/dockerfiles/.bashrc.docker"
-fi
+# if [[ -f "$HOME/.dotfiles/scripts/dockerfiles/.bashrc.docker" ]]; then
+#   source "$HOME/.dotfiles/scripts/dockerfiles/.bashrc.docker"
+# fi
 
 # Mapping numpad into zsh
 # From http://superuser.com/questions/742171/zsh-z-shell-numpad-numlock-doesnt-work
@@ -117,8 +120,6 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 
 
 alias obs='/Applications/OBS.app/Contents/MacOS/OBS'
-function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
-
 
 # for mac
 # https://gist.github.com/BretFisher/6f688dde0122399efdca5a9d26100437
@@ -163,3 +164,12 @@ export PATH="$PNPM_HOME:$PATH"
 
 # Fix global npm install path https://stackoverflow.com/a/15623632
 export PATH=$PATH:$(npm get prefix)/bin
+
+## WSL2
+
+# Open VS code from WSL
+alias code='/mnt/c/Users/mildronize/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
+
+# Sharing the same `ssh-agent` among multiple login sessions
+_zsh_startup sshagent_init
+
