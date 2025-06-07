@@ -1,0 +1,21 @@
+" Plugin Management
+
+" Vim plug
+call plug#begin()
+Plug 'scrooloose/nerdcommenter'
+Plug 'ervandew/supertab'
+Plug 'bling/vim-airline'               " More Function & theme in Vim status bar
+Plug 'zhaocai/GoldenView.Vim'          " Auto zoom (extended window size) when active a window
+Plug 'tmux-plugins/vim-tmux-focus-events' " Make terminal vim and tmux work better together.
+
+" Load Custom plugins
+if filereadable(expand("~/.vimrc.plug.local"))
+	source ~/.vimrc.plug.local
+endif
+
+call plug#end()
+
+" Load Plugin configs
+for file in split(glob(g:plugin_vimrc_path . '/*.vim'), '\n')
+    exe 'source' file
+endfor

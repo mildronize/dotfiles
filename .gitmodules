@@ -1,6 +1,6 @@
-[submodule ".dotbot"]
-	path = .dotbot
-	url = https://github.com/anishathalye/dotbot.git
 [submodule "zsh/tools/zgen"]
 	path = zsh/tools/zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule "scripts/dockerfiles"]
+	path = scripts/dockerfiles
+	url = https://github.com/mildronize/dockerfiles

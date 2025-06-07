@@ -19,7 +19,7 @@ if isdirectory(expand("~/.vim/plugged/vim-airline"))
         let g:airline_symbols.linenr = ''
     endif
 
-    let g:airline_theme='powerlineish'
+    " let g:airline_theme='powerlineish'
     " let g:airline_theme='durant'
     " let g:airline_theme='dark'
 

@@ -1,6 +1,17 @@
 set nocompatible 		    " use vim, not vi api
 set t_Co=256 			    " support screen-256color
 
+" Enable mouse
+" Send more characters for redraws
+set ttyfast
+
+" Enable mouse use in all modes
+set mouse=a
+
+" Set this to the name of your terminal that supports mouse codes.
+" Must be one of: xterm, xterm2, netterm, dec, jsbterm, pterm
+set ttymouse=xterm2
+
 " disable auto comment insert
 autocmd FileType * setlocal formatoptions-=cro
 
@@ -49,6 +60,14 @@ au FileType liquid set spell spelllang=en_us
 
 " set PEP8
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+
+" For yml/xml, 2 spaces
+au BufRead,BufNewFile *.yml,*xml  set softtabstop=2 tabstop=2 shiftwidth=2
+
+" Override Dockerfile.* into dockerfile type
+augroup filetypedetect
+    au BufRead,BufNewFile Dockerfile.* set filetype=dockerfile
+augroup END
 
 " run autoPEP8
 " set autoread

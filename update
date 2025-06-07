@@ -9,6 +9,7 @@ hash vim 2>/dev/null || { echo >&2 "vim isn't installed.  Aborting."; exit 1; }
 
 TARGET_PATH="$HOME/.dotfiles"
 VIMPLUG_PATH="$HOME/.vim/autoload/plug.vim"
+TPM_PATH="$HOME/.tmux/plugins/tpm"
 
 if [ ! -d "$TARGET_PATH" ]; then
     echo "~/.dotfiles isn't existing. Please run ~/.dotfiles/install"
@@ -21,7 +22,15 @@ if [ ! -f "$VIMPLUG_PATH" ]; then
 fi
 
 
+# Install Tmux Plugin
+if [ ! -d "$TPM_PATH" ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+else
+    echo "Tmux Plugin Manager is already installed!"
+fi
+
 { echo "Creating... symbol link with dotbot"; $TARGET_PATH/dotbot; } && \
     { echo "Installing vim plugin"; vim +PlugInstall +qall; } && \
     echo "All done!"
 
+bash -c "cd $HOME/.dotfiles && git submodule update --recursive --remote"

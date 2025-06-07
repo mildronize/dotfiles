@@ -41,8 +41,8 @@ nnoremap <silent> <Leader>h :bprev<CR>
 
 
 "Mapp jk to <ESC>
-inoremap jk <ESC>
-inoremap kj <ESC>
+" inoremap jk <ESC>
+" inoremap kj <ESC>
 
 "About Search
 set incsearch

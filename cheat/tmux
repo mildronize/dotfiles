@@ -1,0 +1,52 @@
+# TMUX in Shell
+Start new                   | tmux
+Start new with session name | tmux new -s [session_name]
+Attach session              | tmux a #  (or at, or attach)
+Attach to named             | tmux a -t [session_name]
+List sessions               | tmux ls
+kill session                | tmux kill-session -t [session_name]
+### More
+rename session              | <Prefix> + $
+# Start a shared session:
+tmux -S /tmp/your_shared_session
+chmod 777 /tmp/your_shared_session
+
+# TMUX in Hot Key
+Hit prefix `Ctrl+a` and then
+
+## Windows (tabs)
+New window             | c
+Name window            | ,
+List windows           | w
+Find window            | f
+Kill window            | &
+Move window            | .     | prompted for a new number
+Switch between windows | [0-9]
+
+## Panes (splits)
+horizontal split  | %
+vertical split    | "
+"Page up/down     | page-up/down
+swap panes        | o
+show pane numbers | q
+kill pane         | x
+toggle pane zoom  | z
+------------------------
+### More
++  break pane into window (e.g. to select text by mouse to copy)
+-  restore pane from window
+⍽  space - toggle between layouts
+q (Show pane numbers, when the numbers show up type the key to goto that pane)
+{ (Move the current pane left)
+} (Move the current pane right)
+
+## Misc
+detach         | d
+big clock      | t
+list shortcuts | ?
+prompt         | :
+reload config  | : source-file /path/to/file
+
+# Ref
+Modify from https://gist.github.com/MohamedAlaa/2961058
+https://gist.github.com/henrik/1967800
