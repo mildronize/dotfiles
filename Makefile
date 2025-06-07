@@ -77,19 +77,6 @@ tmux-clean: ## Clean Tmux
 zsh: ## Install .zshrcs
 	@echo install zsh
 	ln -sf $(current_dir)/zsh/.zshrc $(HOME)
-	ln -sf $(current_dir)/zsh/.zshrc.zgen $(HOME)
-	ln -sf $(current_dir)/zsh/.zshrc.local $(HOME)
-	git submodule update --init --recursive
-	# $(MAKE) zsh-reload-rc
-
-# zsh-all: zsh
-	# @echo install zsh-rest
-	# zsh
-	# $(MAKE) zsh-reload-rc
-
-# zsh-reload-rc:
-	# rm -f $(zgen_init_path)
-	# source $(HOME)/.zshrc
 
 zsh-clean: ## Clean zsh
 	rm -rfv $(HOME)/.zshrc* $(HOME)/.zgen
