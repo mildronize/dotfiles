@@ -7,6 +7,8 @@ brew install starship
 brew install fnm # Node Version Manager
 ```
 
+brew install pygments
+
 ### For Starship install font
 A [Nerd Font](https://www.nerdfonts.com/font-downloads) installed and enabled in your terminal (for example, try the FiraCode Nerd Font).
 

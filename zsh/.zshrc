@@ -25,6 +25,7 @@ source "${HOME}/.dotfiles/zsh/zgen/zgen.zsh"
 # check if there's no init script
 if ! zgen saved; then
     zgen load zsh-users/zsh-history-substring-search
+    zgen load zsh-users/zsh-completions
     zgen save
 fi
 
