@@ -13,17 +13,20 @@ setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
 
-# Emacs keybindings
-bindkey -e
-# Use the up and down keys to navigate the history
-bindkey "\e[A" history-beginning-search-backward
-bindkey "\e[B" history-beginning-search-forward
-
 # Move to directories without cd
 setopt autocd
 
 # Initialize completion
 autoload -U compinit; compinit
+
+# load zgen
+source "${HOME}/.dotfiles/zsh/zgen/zgen.zsh"
+
+# check if there's no init script
+if ! zgen saved; then
+    zgen load zsh-users/zsh-history-substring-search
+    zgen save
+fi
 
 # The most important aliases ever (the only thing I borrowed from OMZ)
 alias l='ls -lah'
