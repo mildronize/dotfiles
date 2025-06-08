@@ -31,6 +31,6 @@ brew install kubernetes-cli
 
 # kubectx
 brew install kubectx
-# alias kctx=kubectx  # Switch between kubectl contexts
-# alias kns=kubens  # Switch between kubectl namespaces
+# Use k ctx
+# Use k ns
 ```

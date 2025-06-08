@@ -54,8 +54,6 @@ eval "$(starship init zsh)"
 alias python='python3'
 # Kube
 alias k='kubectl' # kubectl alias
-alias kctx=kubectx  # Switch between kubectl contexts
-alias kns=kubens  # Switch between kubectl namespaces
 
 
 # -----------------------
