@@ -45,6 +45,17 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 eval "$(starship init zsh)"
 
 # -----------------------
+# Program aliases
+# -----------------------
+
+alias python='python3'
+# Kube
+alias k='kubectl' # kubectl alias
+alias kctx=kubectx  # Switch between kubectl contexts
+alias kns=kubens  # Switch between kubectl namespaces
+
+
+# -----------------------
 # .git alias from oh-my-zsh
 # https://gist.github.com/DavidToca/3086571
 # -----------------------

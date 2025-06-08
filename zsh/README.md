@@ -18,3 +18,19 @@ https://github.com/BuilderIO/ai-shell
 npm install -g @builder.io/ai-shell
 ai config set OPENAI_KEY=<your token>
 ```
+
+### Program 
+
+
+#### Kubernetes
+
+```bash
+# kubectl
+brew install kubernetes-cli
+# alias k=kubectl
+
+# kubectx
+brew install kubectx
+# alias kctx=kubectx  # Switch between kubectl contexts
+# alias kns=kubens  # Switch between kubectl namespaces
+```
