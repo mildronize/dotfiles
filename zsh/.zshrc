@@ -38,6 +38,9 @@ source <(fzf --zsh)
 # Set up zoxide to move between folders efficiently
 eval "$(zoxide init zsh)"
 
+# Setup fmt
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 # Set up the Starship prompt
 eval "$(starship init zsh)"
 
