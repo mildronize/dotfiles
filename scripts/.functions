@@ -162,23 +162,3 @@ alias ssh-attach="sshagent_init"
 #                                                End Block
 #  
 #########################################################################################
-
-
-# function login-psu {
-#     # Define Color
-#     RED='\033[0;31m'
-#     GREEN='\033[0;32m'
-#     NC='\033[0m' # No Color
-#     # checking required package
-#     hash http 2>/dev/null || { echo >&2 "${RED}httpie isn't installed.  Aborting.${NC}"; return 1; }
-
-#     user=5810120061
-#     echo "login to PSU with $user, Enter Password: "
-#     read -s password
-#     response="$(http --form POST https://cp-xml.psu.ac.th/auth.php username=$user password=$password login=Login)"
-#     if [[ $response == *"Login failed"* ]]; then
-#         echo "${RED}Login Failed${NC}";
-#     else
-#         echo "${GREEN}Login Successfully${NC}";
-#     fi
-# }
