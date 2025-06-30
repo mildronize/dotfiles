@@ -67,25 +67,6 @@ alias ack="ack --color"
 # kill process with pid
 alias killp="kill -KILL"
 
-
-# Run tmux when start computer
-# tmux attach > /dev/null 2>&1 || tmux new > /dev/null 2>&1
-
-# NVM
-# Please install nvm before: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Cheat
-export DEFAULT_CHEAT_DIR=$HOME/.dotfiles/cheat
-export CHEATCOLORS=true
-
-_cmpl_cheat() {
-	reply=($(cheat -l | cut -d' ' -f1))
-}
-compctl -K _cmpl_cheat cheat
-
 # Pretty Print
 alias pretty-json='python -m json.tool | pygmentize -l javascript'
 function code-color {
@@ -98,36 +79,10 @@ function docker-bash {
     docker exec -it $1 /bin/bash
 }
 
-# --------------------------------------------------------
-#
-# For Mac OS
-#
-# --------------------------------------------------------
-
-# Find in homebrew first
-export PATH="/opt/homebrew/bin:$PATH"
-
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export PATH=$PATH:/Library/TeX/texbin
-export PATH=$PATH:/usr/local/share/dotnet
-
-export PATH=$PATH:$HOME/Software/flutter/bin
-export PATH=$PATH:$HOME/Software/dart-sdk/bin
-export PATH="$PATH":"$HOME/.pub-cache/bin"
-
-# dotnet config
-export PATH="$PATH:$HOME/.dotnet/tools"
-
-
-alias obs='/Applications/OBS.app/Contents/MacOS/OBS'
-
 # for mac
 # https://gist.github.com/BretFisher/6f688dde0122399efdca5a9d26100437
 # then add alias to your ~/.bash_profile or ~/.bashrc or ~/.zshrc etc.
 alias pcat='pygmentize -f terminal256 -O style=native -g'
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH":
 
 function sync-upstream {
     git checkout $1 && git fetch upstream && git merge upstream/$1
@@ -145,31 +100,22 @@ function checkout-pr {
   fi
 }
 
-# .net 6
-# export DOTNET_ROOT=$HOME/dotnet
-# export PATH=$PATH:$HOME/dotnet
-alias dotnet6='$HOME/dotnet/dotnet'
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
-## Gits-sizer
-export PATH=$PATH:$HOME/git-sizer
+# Set up zoxide to move between folders efficiently
+eval "$(zoxide init zsh)"
 
-alias python3.8='/usr/bin/python3'
+# Setup fmt
+eval "$(fnm env --use-on-cd --shell zsh)"
 
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
+# Set up the Starship prompt
+eval "$(starship init zsh)"
 
+# -----------------------
+# Program aliases
+# -----------------------
 
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-
-# Fix global npm install path https://stackoverflow.com/a/15623632
-export PATH=$PATH:$(npm get prefix)/bin
-
-## WSL2
-
-# Open VS code from WSL
-alias code='/mnt/c/Users/mildronize/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
-
-# Sharing the same `ssh-agent` among multiple login sessions
-_zsh_startup sshagent_init
-
+alias python='python3'
+# Kube
+alias k='kubectl' # kubectl alias

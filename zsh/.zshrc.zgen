@@ -9,19 +9,18 @@ if ! zgen saved; then
 
     # plugins
     zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/sudo
+   # zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/command-not-found
-    zgen oh-my-zsh plugins/python
-    zgen oh-my-zsh plugins/debian
+   # zgen oh-my-zsh plugins/python
+   # zgen oh-my-zsh plugins/debian
     zgen oh-my-zsh plugins/common-aliases
 
     zgen load djui/alias-tips                        # If you can't remember alias, it can tell you
-    zgen load rummik/nvm-zsh                         # Node Version Management
-    zgen load chrissicool/zsh-256color               # Set terminal to 256 colors
+    # zgen load chrissicool/zsh-256color               # Set terminal to 256 colors
 
     zgen load zsh-users/zsh-history-substring-search #
-    zgen load zsh-users/zsh-syntax-highlighting      #
-    zgen load joel-porquet/zsh-dircolors-solarized   # Fix dir color for solarized colorscheme
+    # zgen load zsh-users/zsh-syntax-highlighting      #
+    # zgen load joel-porquet/zsh-dircolors-solarized   # Fix dir color for solarized colorscheme
 
     # completions
     zgen load zsh-users/zsh-completions src
