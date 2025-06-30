@@ -131,3 +131,9 @@ alias ggpush='git push origin $(current_branch)'
 compdef ggpush=git
 alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
 compdef ggpnp=git
+# fnm
+FNM_PATH="/Users/thadawangthammang/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/thadawangthammang/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
