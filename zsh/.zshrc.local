@@ -119,3 +119,5 @@ eval "$(starship init zsh)"
 alias python='python3'
 # Kube
 alias k='kubectl' # kubectl alias
+
+alias ansible='docker run --rm -it -v $(pwd):/work -w /work ghcr.io/thaitype/ansible'
