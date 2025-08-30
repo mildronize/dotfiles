@@ -1,10 +1,20 @@
 ## Install
 
 ```bash
-brew install fzf
-brew install zoxide
+brew install fzf # A command-line fuzzy finder
+brew install zoxide # A smarter cd command
 brew install starship
+brew install eza # ls alternative
+brew install git-delta # git diff alternative 
 brew install fnm # Node Version Manager
+```
+
+### Setup Delta
+```
+git config --global core.pager delta
+git config --global interactive.diffFilter 'delta --color-only'
+git config --global delta.navigate true
+git config --global merge.conflictStyle zdiff3
 ```
 
 ### A curated list of command-line utilities written in Rust
