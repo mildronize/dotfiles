@@ -64,7 +64,7 @@ function rezsh {
 # -----------------------
 
 alias ls='eza'
-
+alias http='xh'
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)

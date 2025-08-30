@@ -6,6 +6,7 @@ brew install zoxide # A smarter cd command
 brew install starship
 brew install eza # ls alternative
 brew install git-delta # git diff alternative 
+brew install xh # httpie alternative
 brew install fnm # Node Version Manager
 ```
 
