@@ -167,3 +167,7 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+# Claude multiple account support
+alias claude-personal="CLAUDE_CONFIG_DIR=~/.claude-personal claude"
+alias claude-work="CLAUDE_CONFIG_DIR=~/.claude-work claude"
