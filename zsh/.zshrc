@@ -171,3 +171,5 @@ fi
 # Claude multiple account support
 alias claude-personal="CLAUDE_CONFIG_DIR=~/.claude-personal claude"
 alias claude-work="CLAUDE_CONFIG_DIR=~/.claude-work claude"
+# bun completions
+[ -s "/Users/thada/.bun/_bun" ] && source "/Users/thada/.bun/_bun"

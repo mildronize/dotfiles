@@ -8,6 +8,8 @@ brew install eza # ls alternative
 brew install git-delta # git diff alternative 
 brew install xh # httpie alternative
 brew install fnm # Node Version Manager
+
+brew install duf # Disk Usage/Free Utility
 ```
 
 ### Setup Delta
